@@ -1,0 +1,74 @@
+@use "./font" as *;
+@use "./colors" as *;
+
+.signup-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 12.5rem;
+  background-color: $tertiaryClr;
+
+  & > * {
+    flex: 1;
+  }
+  .bottom-text-container {
+    color: $primaryClr;
+
+    h1 {
+      font-size: 4.375rem;
+      font-family: $fontBold;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-family: $interFont;
+      line-height: 1.5;
+      max-width: 60ch;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  padding: 5rem 12.5rem;
+
+  .logo {
+    width: 50px;
+  }
+
+  & > * {
+    flex: 1;
+  }
+
+  article {
+    line-height: 1.7;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-family: $interFont;
+    }
+
+    ul {
+      display: flex;
+      gap: 1.5rem;
+      font-family: $interFont;
+
+      a {
+        text-decoration: none;
+        color: $secondaryClr;
+
+        &:hover {
+          color: $hoverClr;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $secondaryClr;
+  color: $primaryClr;
+  padding: 3rem 12.5rem;
+}

@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  padding-block: 3rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(100px);
+  transition: all 0.2s ease-in-out;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 12.5rem;
+}
+header nav ul {
+  display: flex;
+  gap: 3.75rem;
+  font-size: 1.5625rem;
+}
+header nav ul a {
+  text-decoration: none;
+  color: #777777;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+header nav ul a:hover {
+  color: #363231;
+}
+header nav img {
+  object-fit: contain;
+  max-width: 9.375rem;
+}
+
+.scroll-up header {
+  padding-block: 1rem;
+}
+
+@font-face {
+  font-family: cool-regular;
+  src: url(/src/assets/fonts/coolvetica/coolvetica-rg.otf);
+}
+@font-face {
+  font-family: cool-bold;
+  src: url(/src/assets/fonts/coolvetica/coolvetica-compressed-hv.otf);
+}
+.about {
+  text-align: center;
+}
+.about .section-title {
+  margin-top: 10rem;
+}
+.about .section-title h1 {
+  font-size: 6.25rem;
+  font-family: cool-bold;
+}
+.about .section-title p {
+  text-transform: uppercase;
+  color: #777777;
+  font-size: 1.25rem;
+}
+.about .banner {
+  background-color: #9b9080;
+  padding: 3rem 12.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.about .banner p {
+  color: #d3d5d4;
+  font-size: 1.875rem;
+}
+.about .article-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12.5rem;
+  margin-block: 10rem;
+}
+.about .article-container article {
+  display: flex;
+  justify-content: center;
+  gap: 6.25rem;
+  text-align: start;
+  width: max-content;
+  user-select: none;
+}
+.about .article-container article span {
+  background-color: #9b9080;
+  color: #d3d5d4;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+.about .article-container article h2 {
+  font-size: 3.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.about .article-container article p {
+  font-size: 1.25rem;
+  color: #777777;
+  max-width: 50ch;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.about .article-container article:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.about .article-container article ul {
+  list-style: square;
+  margin-left: 2rem;
+}
+.about .article-container article ul li {
+  color: #777777;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.signup-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 12.5rem;
+  background-color: #9b9080;
+}
+.signup-bottom > * {
+  flex: 1;
+}
+.signup-bottom .bottom-text-container {
+  color: #d3d5d4;
+}
+.signup-bottom .bottom-text-container h1 {
+  font-size: 4.375rem;
+  font-family: cool-bold;
+  margin-bottom: 1.5rem;
+}
+.signup-bottom .bottom-text-container p {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.contact {
+  display: flex;
+  padding: 5rem 12.5rem;
+}
+.contact .logo {
+  width: 50px;
+}
+.contact > * {
+  flex: 1;
+}
+.contact article {
+  line-height: 1.7;
+}
+.contact article h2 {
+  font-size: 1.25rem;
+}
+.contact article p {
+  font-family: "Inter", sans-serif;
+}
+.contact article ul {
+  display: flex;
+  gap: 1.5rem;
+  font-family: "Inter", sans-serif;
+}
+.contact article ul a {
+  text-decoration: none;
+  color: #363231;
+}
+.contact article ul a:hover {
+  color: #29d3c5;
+}
+
+footer {
+  background-color: #363231;
+  color: #d3d5d4;
+  padding: 3rem 12.5rem;
+}
+
+button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-family: cool-regular;
+  font-size: 1.5625rem;
+}
+button:hover {
+  background-color: #29d3c5;
+  color: #d3d5d4;
+  border-color: transparent;
+}
+
+.login-button {
+  background-color: transparent;
+  border: 1px solid #777777;
+  margin-right: 1.875rem;
+}
+
+.signup-button {
+  background-color: #598986;
+  color: #d3d5d4;
+  border-color: transparent;
+}
+
+.bottom-button-container {
+  text-align: center;
+}
+.bottom-button-container button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #d3d5d4;
+  color: #d3d5d4;
+  margin-left: 1.5rem;
+  width: 10rem;
+}
+.bottom-button-container button:nth-child(2):hover {
+  background-color: #29d3c5;
+}
+
+body {
+  background-color: #d3d5d4;
+  color: #363231;
+  font-family: cool-regular;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+main div {
+  text-align: center;
+  transform: translateY(15rem);
+  height: max-content;
+  position: relative;
+}
+main div h1 {
+  font-family: cool-bold;
+  font-size: 9.375rem;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+}
+main div p {
+  color: #777777;
+  font-size: 2.5rem;
+  max-width: 40ch;
+}
+main div .star {
+  width: 60px;
+  position: absolute;
+}
+main div .star-one {
+  top: -1rem;
+  left: -5rem;
+}
+main div .star-two {
+  bottom: -1rem;
+  right: -5rem;
+}
+main img {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  max-width: 46.875rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,61 @@
+@forward "./resets";
+@forward "./header";
+@forward "./about";
+@forward "./footer";
+@forward "./buttons";
+@use "./font" as *;
+@use "./colors" as *;
+
+body {
+  background-color: $primaryClr;
+  color: $secondaryClr;
+  font-family: cool-regular;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+
+  div {
+    text-align: center;
+    transform: translateY(15rem);
+    height: max-content;
+    position: relative;
+
+    h1 {
+      font-family: $fontBold;
+      font-size: 9.375rem;
+      text-transform: capitalize;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      color: $fadeClr;
+      font-size: 2.5rem;
+      max-width: 40ch;
+    }
+
+    .star {
+      width: 60px;
+      position: absolute;
+
+      &-one {
+        top: -1rem;
+        left: -5rem;
+      }
+      &-two {
+        bottom: -1rem;
+        right: -5rem;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    max-width: 46.875rem;
+  }
+}

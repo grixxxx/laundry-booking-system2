@@ -1,0 +1,43 @@
+@use "./colors" as *;
+
+header {
+  padding-block: 3rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(100px);
+  transition: all 0.2s ease-in-out;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 12.5rem;
+
+    ul {
+      display: flex;
+      gap: 3.75rem;
+      font-size: 1.5625rem;
+
+      a {
+        text-decoration: none;
+        color: $fadeClr;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondaryClr;
+        }
+      }
+    }
+
+    img {
+      object-fit: contain;
+      max-width: 9.375rem;
+    }
+  }
+}
+
+.scroll-up header {
+  padding-block: 1rem;
+}

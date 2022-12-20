@@ -1,0 +1,88 @@
+@use "./colors" as *;
+@use "./font" as *;
+
+.about {
+  text-align: center;
+
+  .section-title {
+    margin-top: 10rem;
+
+    h1 {
+      font-size: 6.25rem;
+      font-family: $fontBold;
+    }
+    p {
+      text-transform: uppercase;
+      color: $fadeClr;
+      font-size: 1.25rem;
+    }
+  }
+
+  .banner {
+    background-color: $tertiaryClr;
+    padding: 3rem 12.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: $primaryClr;
+      font-size: 1.875rem;
+    }
+  }
+
+  .article-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12.5rem;
+    margin-block: 10rem;
+
+    article {
+      display: flex;
+      justify-content: center;
+      gap: 6.25rem;
+      text-align: start;
+      width: max-content;
+      user-select: none;
+
+      span {
+        background-color: $tertiaryClr;
+        color: $primaryClr;
+        padding: 0.3rem;
+        border-radius: 5px;
+      }
+
+      h2 {
+        font-size: 3.75rem;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: $fadeClr;
+        max-width: 50ch;
+        font-family: $interFont;
+        font-weight: 500;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+      }
+
+      ul {
+        list-style: square;
+        margin-left: 2rem;
+
+        li {
+          color: $fadeClr;
+          font-family: $interFont;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

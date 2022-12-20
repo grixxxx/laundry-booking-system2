@@ -1,0 +1,44 @@
+@use "./font" as *;
+@use "./colors" as *;
+
+button {
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-family: $fontRegular;
+  font-size: 1.5625rem;
+
+  &:hover {
+    background-color: $hoverClr;
+    color: $primaryClr;
+    border-color: transparent;
+  }
+}
+
+.login-button {
+  background-color: transparent;
+  border: 1px solid $fadeClr;
+  margin-right: 1.875rem;
+}
+
+.signup-button {
+  background-color: $accentClr;
+  color: $primaryClr;
+  border-color: transparent;
+}
+
+.bottom-button-container {
+  text-align: center;
+
+  button:nth-child(2) {
+    background-color: transparent;
+    border: 1px solid $primaryClr;
+    color: $primaryClr;
+    margin-left: 1.5rem;
+    width: 10rem;
+
+    &:hover {
+      background-color: $hoverClr;
+    }
+  }
+}
