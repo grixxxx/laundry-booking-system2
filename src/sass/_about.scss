@@ -4,29 +4,16 @@
 .about {
   text-align: center;
 
-  .section-title {
-    margin-top: 10rem;
-
-    h1 {
-      font-size: 6.25rem;
-      font-family: $fontBold;
-    }
-    p {
-      text-transform: uppercase;
-      color: $fadeClr;
-      font-size: 1.25rem;
-    }
-  }
-
   .banner {
     background-color: $tertiaryClr;
-    padding: 3rem 12.5rem;
+    padding-block: 3rem;
+    padding-inline: min(12.5rem, 5vw);
     display: flex;
     justify-content: space-between;
 
     p {
       color: $primaryClr;
-      font-size: 1.875rem;
+      font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
     }
   }
 
@@ -46,6 +33,11 @@
       width: max-content;
       user-select: none;
 
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+
       span {
         background-color: $tertiaryClr;
         color: $primaryClr;
@@ -54,7 +46,7 @@
       }
 
       h2 {
-        font-size: 3.75rem;
+        font-size: clamp(1rem, 0.6299rem + 1.5584vw, 3.75rem);
         margin-top: 1rem;
         margin-bottom: 1.5rem;
       }

@@ -185,27 +185,16 @@ header nav img {
 .about {
   text-align: center;
 }
-.about .section-title {
-  margin-top: 10rem;
-}
-.about .section-title h1 {
-  font-size: 6.25rem;
-  font-family: cool-bold;
-}
-.about .section-title p {
-  text-transform: uppercase;
-  color: #777777;
-  font-size: 1.25rem;
-}
 .about .banner {
   background-color: #9b9080;
-  padding: 3rem 12.5rem;
+  padding-block: 3rem;
+  padding-inline: min(12.5rem, 5vw);
   display: flex;
   justify-content: space-between;
 }
 .about .banner p {
   color: #d3d5d4;
-  font-size: 1.875rem;
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
 }
 .about .article-container {
   display: flex;
@@ -223,6 +212,10 @@ header nav img {
   width: max-content;
   user-select: none;
 }
+.about .article-container article img {
+  width: 100%;
+  max-width: 500px;
+}
 .about .article-container article span {
   background-color: #9b9080;
   color: #d3d5d4;
@@ -230,7 +223,7 @@ header nav img {
   border-radius: 5px;
 }
 .about .article-container article h2 {
-  font-size: 3.75rem;
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 3.75rem);
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -259,12 +252,11 @@ header nav img {
 .signup-bottom {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 5rem 12.5rem;
+  justify-content: space-evenly;
+  padding: 5rem;
+  margin-inline: 12.5rem;
+  border-radius: 10px;
   background-color: #9b9080;
-}
-.signup-bottom > * {
-  flex: 1;
 }
 .signup-bottom .bottom-text-container {
   color: #d3d5d4;
@@ -346,16 +338,6 @@ button:hover {
 .bottom-button-container {
   text-align: center;
 }
-.bottom-button-container button:nth-child(2) {
-  background-color: transparent;
-  border: 1px solid #d3d5d4;
-  color: #d3d5d4;
-  margin-left: 1.5rem;
-  width: 10rem;
-}
-.bottom-button-container button:nth-child(2):hover {
-  background-color: #29d3c5;
-}
 
 body {
   background-color: #d3d5d4;
@@ -377,13 +359,13 @@ main div {
 }
 main div h1 {
   font-family: cool-bold;
-  font-size: 9.375rem;
+  font-size: clamp(3rem, -1.0666rem + 8.7013vw, 9.375rem);
   text-transform: capitalize;
   margin-bottom: 1.5rem;
 }
 main div p {
   color: #777777;
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
   max-width: 40ch;
 }
 main div .star {
@@ -403,6 +385,57 @@ main img {
   bottom: 0;
   z-index: -1;
   max-width: 46.875rem;
+  width: 100%;
+}
+
+.pricing {
+  padding-inline: 12.5rem;
+  margin-bottom: 5rem;
+}
+.pricing .pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 3.75rem;
+  grid-row-gap: 1.875rem;
+}
+.pricing article {
+  display: flex;
+  padding: 1rem 2.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Inter", sans-serif;
+}
+.pricing article h2 {
+  font-weight: 500;
+  font-size: 2.1875rem;
+}
+.pricing article p {
+  margin-left: auto;
+  font-size: 2.1875rem;
+}
+.pricing article p span {
+  font-size: 1rem;
+}
+.pricing img {
+  width: 50px;
+}
+
+.section-title {
+  margin-block: 7rem;
+  text-align: center;
+}
+.section-title h1 {
+  font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
+  font-family: cool-bold;
+}
+.section-title p {
+  text-transform: uppercase;
+  color: #777777;
+  font-size: 1.25rem clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
+  margin-inline: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

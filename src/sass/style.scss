@@ -26,14 +26,14 @@ main {
 
     h1 {
       font-family: $fontBold;
-      font-size: 9.375rem;
+      font-size: clamp(3rem, -1.0666rem + 8.7013vw, 9.375rem);
       text-transform: capitalize;
       margin-bottom: 1.5rem;
     }
 
     p {
       color: $fadeClr;
-      font-size: 2.5rem;
+      font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
       max-width: 40ch;
     }
 
@@ -57,5 +57,62 @@ main {
     bottom: 0;
     z-index: -1;
     max-width: 46.875rem;
+    width: 100%;
+  }
+}
+
+.pricing {
+  padding-inline: 12.5rem;
+  margin-bottom: 5rem;
+
+  .pricing-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-column-gap: 3.75rem;
+    grid-row-gap: 1.875rem;
+  }
+
+  article {
+    display: flex;
+    padding: 1rem 2.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: $interFont;
+
+    h2 {
+      font-weight: 500;
+      font-size: 2.1875rem;
+    }
+    p {
+      margin-left: auto;
+      font-size: 2.1875rem;
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  img {
+    width: 50px;
+  }
+}
+
+.section-title {
+  margin-block: 7rem;
+  text-align: center;
+
+  h1 {
+    font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
+    font-family: $fontBold;
+  }
+  p {
+    text-transform: uppercase;
+    color: $fadeClr;
+    font-size: 1.25rem clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
+    margin-inline: 1rem;
   }
 }

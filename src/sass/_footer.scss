@@ -4,13 +4,12 @@
 .signup-bottom {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 5rem 12.5rem;
+  justify-content: space-evenly;
+  padding: 5rem;
+  margin-inline: 12.5rem;
+  border-radius: 10px;
   background-color: $tertiaryClr;
 
-  & > * {
-    flex: 1;
-  }
   .bottom-text-container {
     color: $primaryClr;
 

@@ -29,16 +29,4 @@ button {
 
 .bottom-button-container {
   text-align: center;
-
-  button:nth-child(2) {
-    background-color: transparent;
-    border: 1px solid $primaryClr;
-    color: $primaryClr;
-    margin-left: 1.5rem;
-    width: 10rem;
-
-    &:hover {
-      background-color: $hoverClr;
-    }
-  }
 }
