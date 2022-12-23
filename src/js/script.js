@@ -35,3 +35,17 @@ hamburgerMenu.addEventListener("click", () => {
     });
   });
 });
+
+const loginModal = document.querySelector(".login-modal");
+
+setInterval(() => {
+  loginModal.hasAttribute("open")
+    ? (document.body.style.overflow = "hidden")
+    : (document.body.style.overflow = "visible");
+}, 500);
+
+const loginButton = document
+  .querySelector(".login-button")
+  .addEventListener("click", () => {
+    loginModal.showModal();
+  });

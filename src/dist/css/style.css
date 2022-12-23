@@ -168,6 +168,9 @@ table {
   header {
     position: relative;
   }
+  main > div {
+    transform: translateY(20rem) !important;
+  }
   .ham {
     display: block;
   }
@@ -181,6 +184,17 @@ table {
     padding-block: 3rem;
     transition: 0.3s ease-in;
     z-index: 1;
+  }
+  .star {
+    width: 30px !important;
+  }
+  .star-one {
+    top: -3rem !important;
+    left: 0 !important;
+  }
+  .star-two {
+    bottom: -3rem !important;
+    right: 0 !important;
   }
 }
 header {
@@ -288,7 +302,7 @@ header nav img {
 }
 .about .banner {
   background-color: #9b9080;
-  padding-block: 3rem;
+  padding-block: 1em;
   padding-inline: min(10%, 12.5rem);
   display: flex;
   justify-content: space-between;
@@ -551,6 +565,23 @@ main img {
   font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
   margin-inline: 1rem;
   font-family: "Inter", sans-serif;
+}
+
+dialog {
+  text-align: center;
+  padding: 5rem;
+  border: none;
+}
+dialog::backdrop {
+  backdrop-filter: blur(10px);
+}
+dialog form {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+dialog form input {
+  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

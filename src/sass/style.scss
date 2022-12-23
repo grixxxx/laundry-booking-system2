@@ -135,3 +135,23 @@ main {
     font-family: $interFont;
   }
 }
+
+dialog {
+  text-align: center;
+  padding: 5rem;
+  border: none;
+
+  &::backdrop {
+    backdrop-filter: blur(10px);
+  }
+
+  form {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+
+    input {
+      padding: 1rem;
+    }
+  }
+}
