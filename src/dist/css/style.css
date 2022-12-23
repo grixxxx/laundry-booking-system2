@@ -124,6 +124,10 @@ q {
   quotes: none;
 }
 
+p {
+  line-height: 1.7;
+}
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -137,6 +141,48 @@ table {
   border-spacing: 0;
 }
 
+@media (width > 900px) {
+  .pricing-container {
+    grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+  }
+  .contact {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .signup-bottom {
+    margin-inline: auto;
+    border-radius: 10px;
+    grid-template-columns: 2fr 1fr;
+    max-width: 76.25rem;
+  }
+  .signup-bottom .banner-signup-button {
+    width: max-content;
+  }
+  .ham {
+    display: none;
+  }
+  .nav-list {
+    transform: translateY(0);
+  }
+}
+@media (width < 900px) {
+  header {
+    position: relative;
+  }
+  .ham {
+    display: block;
+  }
+  .nav-list {
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    transform: translateY(-100%);
+    background-color: #d3d5d4;
+    width: 100%;
+    padding-block: 3rem;
+    transition: 0.3s ease-in;
+    z-index: 1;
+  }
+}
 header {
   padding-block: 3rem;
   position: fixed;
@@ -149,12 +195,13 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 12.5rem;
+  padding-inline: min(10%, 12.5rem);
 }
 header nav ul {
   display: flex;
-  gap: 3.75rem;
-  font-size: 1.5625rem;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: clamp(1rem, 0.5037rem + 0.8824vw, 1.5625rem);
 }
 header nav ul a {
   text-decoration: none;
@@ -163,7 +210,7 @@ header nav ul a {
   cursor: pointer;
 }
 header nav ul a:hover {
-  color: #363231;
+  color: #282524;
 }
 header nav img {
   object-fit: contain;
@@ -172,6 +219,60 @@ header nav img {
 
 .scroll-up header {
   padding-block: 1rem;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham8 .top {
+  stroke-dasharray: 40 160;
+}
+
+.ham8 .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+
+.ham8 .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.ham8.active .top {
+  stroke-dashoffset: -64px;
+}
+
+.ham8.active .middle {
+  transform: rotate(90deg);
+}
+
+.ham8.active .bottom {
+  stroke-dashoffset: -64px;
 }
 
 @font-face {
@@ -188,7 +289,7 @@ header nav img {
 .about .banner {
   background-color: #9b9080;
   padding-block: 3rem;
-  padding-inline: min(12.5rem, 5vw);
+  padding-inline: min(10%, 12.5rem);
   display: flex;
   justify-content: space-between;
 }
@@ -201,15 +302,15 @@ header nav img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 12.5rem;
-  margin-block: 10rem;
+  gap: 7rem;
+  margin-block: min(10%, 7rem);
 }
 .about .article-container article {
   display: flex;
-  justify-content: center;
   gap: 6.25rem;
   text-align: start;
-  width: max-content;
+  width: 100%;
+  max-width: 1200px;
   user-select: none;
 }
 .about .article-container article img {
@@ -217,23 +318,24 @@ header nav img {
   max-width: 500px;
 }
 .about .article-container article span {
-  background-color: #9b9080;
+  background-color: #a4c1bf;
   color: #d3d5d4;
   padding: 0.3rem;
   border-radius: 5px;
+  font-size: 0.625rem;
+  letter-spacing: 3px;
 }
 .about .article-container article h2 {
-  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 3.75rem);
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
 .about .article-container article p {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
   color: #777777;
   max-width: 50ch;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  line-height: 1.7;
   margin-bottom: 1rem;
 }
 .about .article-container article:nth-child(2) {
@@ -250,40 +352,35 @@ header nav img {
 }
 
 .signup-bottom {
-  display: flex;
+  display: grid;
+  gap: 1.5rem;
+  padding: 3rem;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 5rem;
-  margin-inline: 12.5rem;
-  border-radius: 10px;
   background-color: #9b9080;
 }
 .signup-bottom .bottom-text-container {
   color: #d3d5d4;
 }
 .signup-bottom .bottom-text-container h1 {
-  font-size: 4.375rem;
-  font-family: cool-bold;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 .signup-bottom .bottom-text-container p {
   font-family: "Inter", sans-serif;
-  line-height: 1.5;
   max-width: 60ch;
 }
 
 .contact {
-  display: flex;
-  padding: 5rem 12.5rem;
+  display: grid;
+  justify-content: center;
+  padding-block: 5rem;
+  padding-inline: min(10%, 12.5rem);
+  grid-gap: 1.5rem;
+  color: #d3d5d4;
+  background-color: #282524;
 }
 .contact .logo {
   width: 50px;
-}
-.contact > * {
-  flex: 1;
-}
-.contact article {
-  line-height: 1.7;
 }
 .contact article h2 {
   font-size: 1.25rem;
@@ -298,16 +395,17 @@ header nav img {
 }
 .contact article ul a {
   text-decoration: none;
-  color: #363231;
+  color: #d3d5d4;
 }
 .contact article ul a:hover {
   color: #29d3c5;
 }
 
 footer {
-  background-color: #363231;
+  background-color: #282524;
   color: #d3d5d4;
-  padding: 3rem 12.5rem;
+  padding-block: 3rem;
+  padding-inline: min(10%, 12.5rem);
 }
 
 button {
@@ -315,7 +413,7 @@ button {
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   font-family: cool-regular;
-  font-size: 1.5625rem;
+  font-size: clamp(1rem, 0.5037rem + 0.8824vw, 1.5625rem);
 }
 button:hover {
   background-color: #29d3c5;
@@ -326,7 +424,6 @@ button:hover {
 .login-button {
   background-color: transparent;
   border: 1px solid #777777;
-  margin-right: 1.875rem;
 }
 
 .signup-button {
@@ -339,9 +436,13 @@ button:hover {
   text-align: center;
 }
 
+.banner-signup-button {
+  width: 100%;
+}
+
 body {
   background-color: #d3d5d4;
-  color: #363231;
+  color: #282524;
   font-family: cool-regular;
 }
 
@@ -367,6 +468,7 @@ main div p {
   color: #777777;
   font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
   max-width: 40ch;
+  line-height: 1.5;
 }
 main div .star {
   width: 60px;
@@ -389,12 +491,11 @@ main img {
 }
 
 .pricing {
-  padding-inline: 12.5rem;
+  padding-inline: min(10%, 12.5rem);
   margin-bottom: 5rem;
 }
 .pricing .pricing-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-column-gap: 3.75rem;
   grid-row-gap: 1.875rem;
 }
@@ -403,39 +504,53 @@ main img {
   padding: 1rem 2.5rem;
   background-color: #fff;
   border-radius: 10px;
-  display: flex;
   align-items: center;
-  gap: 1rem;
   font-family: "Inter", sans-serif;
+  transition: 0.2s ease-in;
+}
+.pricing article:hover {
+  background-color: #29d3c5;
+  transform: scale(1.02);
+}
+.pricing article:hover img {
+  transform: scale(1.2);
+}
+.pricing article:hover p {
+  font-size: 2.5rem;
 }
 .pricing article h2 {
   font-weight: 500;
-  font-size: 2.1875rem;
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
+  margin-left: 1rem;
 }
 .pricing article p {
   margin-left: auto;
-  font-size: 2.1875rem;
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
+  transition: 0.2s ease-in;
 }
 .pricing article p span {
   font-size: 1rem;
 }
 .pricing img {
-  width: 50px;
+  max-width: 50px;
+  opacity: 0.5;
+  transition: 0.2s ease-in;
 }
 
 .section-title {
-  margin-block: 7rem;
+  margin-block: min(10%, 7rem);
   text-align: center;
 }
 .section-title h1 {
-  font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
-  font-family: cool-bold;
+  font-size: clamp(2rem, -1.0666rem + 8.7013vw, 3.75rem);
+  font-family: cool-regular;
+  text-transform: uppercase;
 }
 .section-title p {
-  text-transform: uppercase;
   color: #777777;
-  font-size: 1.25rem clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
+  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
   margin-inline: 1rem;
+  font-family: "Inter", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

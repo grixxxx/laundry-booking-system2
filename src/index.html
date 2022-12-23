@@ -26,24 +26,38 @@
       <!-- NOTE: NAV -->
       <nav>
         <img src="./assets/laundryLogo.png" alt="business logo" />
-        <ul>
-          <a href="#">
+        <ul class="nav-list">
+          <a href="#" class="nav-list-item">
             <li>Home</li>
           </a>
-          <a href="#">
+          <a href="#" class="nav-list-item">
             <li>About</li>
           </a>
-          <a href="#">
+          <a href="#" class="nav-list-item">
             <li>Pricing</li>
           </a>
-          <a href="#">
+          <a href="#" class="nav-list-item">
             <li>Contact</li>
           </a>
+          <button class="login-button nav-list-item">LOGIN</button>
+          <button class="signup-button nav-list-item" >SIGNUP</button>
         </ul>
-        <section>
-          <button class="login-button">LOGIN</button>
-          <button class="signup-button">SIGNUP</button>
-        </section>
+        <svg
+          class="ham hamRotate ham8"
+          viewBox="0 0 100 100"
+          width="60"
+          onclick="this.classList.toggle('active')"
+        >
+          <path
+            class="line top"
+            d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+          />
+          <path class="line middle" d="m 30,50 h 40" />
+          <path
+            class="line bottom"
+            d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+          />
+        </svg>
       </nav>
       <hr style="width: 80%" />
     </header>
@@ -71,7 +85,7 @@
         <p>Pay via Card or Cash</p>
       </div>
       <div class="section-title">
-        <h1>HOW WE WORKS</h1>
+        <h1>how we works.</h1>
         <p>Start washing with us to save time, money, and energy.</p>
       </div>
 
@@ -114,6 +128,9 @@
         </article>
       </div>
     </section>
+
+    <!-- NOTE: SIGNUP BANNER -->
+
     <section class="signup-bottom">
       <div class="bottom-text-container">
         <h1>FREE PICKUP AND DELIVERY</h1>
@@ -125,7 +142,7 @@
       </div>
 
       <div class="bottom-button-container">
-        <button>GET STARTED</button>
+        <button class="banner-signup-button">GET STARTED</button>
       </div>
     </section>
 
@@ -133,7 +150,7 @@
 
     <section class="pricing">
       <div class="section-title">
-        <h1>PRICING</h1>
+        <h1>pricing.</h1>
         <p>choose the right garments for your needs</p>
       </div>
 
@@ -175,7 +192,7 @@
 
     <section class="contact">
       <div class="logo">
-        <a href="#"><img src="./assets/laundryLogo.png" alt="logo" /></a>
+        <a href="#"><img src="./assets/logoWhite.png" alt="logo" /></a>
       </div>
 
       <article>

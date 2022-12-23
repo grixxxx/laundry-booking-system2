@@ -6,7 +6,7 @@ button {
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   font-family: $fontRegular;
-  font-size: 1.5625rem;
+  font-size: clamp(1rem, 0.5037rem + 0.8824vw, 1.5625rem);
 
   &:hover {
     background-color: $hoverClr;
@@ -18,7 +18,6 @@ button {
 .login-button {
   background-color: transparent;
   border: 1px solid $fadeClr;
-  margin-right: 1.875rem;
 }
 
 .signup-button {
@@ -29,4 +28,8 @@ button {
 
 .bottom-button-container {
   text-align: center;
+}
+
+.banner-signup-button {
+  width: 100%;
 }

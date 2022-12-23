@@ -7,7 +7,7 @@
   .banner {
     background-color: $tertiaryClr;
     padding-block: 3rem;
-    padding-inline: min(12.5rem, 5vw);
+    padding-inline: min(10%, 12.5rem);
     display: flex;
     justify-content: space-between;
 
@@ -22,15 +22,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 12.5rem;
-    margin-block: 10rem;
+    gap: 7rem;
+    margin-block: min(10%, 7rem);
 
     article {
       display: flex;
-      justify-content: center;
       gap: 6.25rem;
       text-align: start;
-      width: max-content;
+      width: 100%;
+      max-width: 1200px;
       user-select: none;
 
       img {
@@ -39,25 +39,26 @@
       }
 
       span {
-        background-color: $tertiaryClr;
+        background-color: $bgAccentClr;
         color: $primaryClr;
         padding: 0.3rem;
         border-radius: 5px;
+        font-size: 0.625rem;
+        letter-spacing: 3px;
       }
 
       h2 {
-        font-size: clamp(1rem, 0.6299rem + 1.5584vw, 3.75rem);
+        font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
         margin-top: 1rem;
         margin-bottom: 1.5rem;
       }
 
       p {
-        font-size: 1.25rem;
+        font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
         color: $fadeClr;
         max-width: 50ch;
         font-family: $interFont;
         font-weight: 500;
-        line-height: 1.7;
         margin-bottom: 1rem;
       }
 

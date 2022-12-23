@@ -2,45 +2,40 @@
 @use "./colors" as *;
 
 .signup-bottom {
-  display: flex;
+  display: grid;
+  gap: 1.5rem;
+  padding: 3rem;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 5rem;
-  margin-inline: 12.5rem;
-  border-radius: 10px;
   background-color: $tertiaryClr;
 
   .bottom-text-container {
     color: $primaryClr;
 
     h1 {
-      font-size: 4.375rem;
-      font-family: $fontBold;
+      font-size: 2rem;
       margin-bottom: 1.5rem;
     }
     p {
       font-family: $interFont;
-      line-height: 1.5;
       max-width: 60ch;
     }
   }
 }
 
 .contact {
-  display: flex;
-  padding: 5rem 12.5rem;
+  display: grid;
+  justify-content: center;
+  padding-block: 5rem;
+  padding-inline: min(10%, 12.5rem);
+  grid-gap: 1.5rem;
+  color: $primaryClr;
+  background-color: $secondaryClr;
 
   .logo {
     width: 50px;
   }
 
-  & > * {
-    flex: 1;
-  }
-
   article {
-    line-height: 1.7;
-
     h2 {
       font-size: 1.25rem;
     }
@@ -56,7 +51,7 @@
 
       a {
         text-decoration: none;
-        color: $secondaryClr;
+        color: $primaryClr;
 
         &:hover {
           color: $hoverClr;
@@ -69,5 +64,6 @@
 footer {
   background-color: $secondaryClr;
   color: $primaryClr;
-  padding: 3rem 12.5rem;
+  padding-block: 3rem;
+  padding-inline: min(10%, 12.5rem);
 }

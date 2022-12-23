@@ -1,0 +1,52 @@
+@use "./colors" as *;
+
+@media (width > 900px) {
+  .pricing-container {
+    grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+  }
+
+  .contact {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .signup-bottom {
+    margin-inline: auto;
+    border-radius: 10px;
+    grid-template-columns: 2fr 1fr;
+    max-width: 76.25rem;
+
+    .banner-signup-button {
+      width: max-content;
+    }
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .nav-list {
+    transform: translateY(0);
+  }
+}
+
+@media (width < 900px) {
+  header {
+    position: relative;
+  }
+
+  .ham {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    transform: translateY(-100%);
+    background-color: $primaryClr;
+    width: 100%;
+    padding-block: 3rem;
+    transition: 0.3s ease-in;
+    z-index: 1;
+  }
+}

@@ -1,4 +1,5 @@
 @forward "./resets";
+@forward "./media-queries";
 @forward "./header";
 @forward "./about";
 @forward "./footer";
@@ -9,7 +10,7 @@
 body {
   background-color: $primaryClr;
   color: $secondaryClr;
-  font-family: cool-regular;
+  font-family: $fontRegular;
 }
 
 main {
@@ -35,6 +36,7 @@ main {
       color: $fadeClr;
       font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
       max-width: 40ch;
+      line-height: 1.5;
     }
 
     .star {
@@ -62,12 +64,12 @@ main {
 }
 
 .pricing {
-  padding-inline: 12.5rem;
+  padding-inline: min(10%, 12.5rem);
   margin-bottom: 5rem;
 
   .pricing-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+
     grid-column-gap: 3.75rem;
     grid-row-gap: 1.875rem;
   }
@@ -77,18 +79,32 @@ main {
     padding: 1rem 2.5rem;
     background-color: #fff;
     border-radius: 10px;
-    display: flex;
     align-items: center;
-    gap: 1rem;
     font-family: $interFont;
+    transition: 0.2s ease-in;
+
+    &:hover {
+      background-color: $hoverClr;
+      transform: scale(1.02);
+
+      & img {
+        transform: scale(1.2);
+      }
+
+      & p {
+        font-size: 2.5rem;
+      }
+    }
 
     h2 {
       font-weight: 500;
-      font-size: 2.1875rem;
+      font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
+      margin-left: 1rem;
     }
     p {
       margin-left: auto;
-      font-size: 2.1875rem;
+      font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
+      transition: 0.2s ease-in;
 
       span {
         font-size: 1rem;
@@ -97,22 +113,25 @@ main {
   }
 
   img {
-    width: 50px;
+    max-width: 50px;
+    opacity: 0.5;
+    transition: 0.2s ease-in;
   }
 }
 
 .section-title {
-  margin-block: 7rem;
+  margin-block: min(10%, 7rem);
   text-align: center;
 
   h1 {
-    font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
-    font-family: $fontBold;
+    font-size: clamp(2rem, -1.0666rem + 8.7013vw, 3.75rem);
+    font-family: $fontRegular;
+    text-transform: uppercase;
   }
   p {
-    text-transform: uppercase;
     color: $fadeClr;
-    font-size: 1.25rem clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
+    font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
     margin-inline: 1rem;
+    font-family: $interFont;
   }
 }
