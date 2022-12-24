@@ -23,10 +23,6 @@
   .ham {
     display: none;
   }
-
-  .nav-list {
-    transform: translateY(0);
-  }
 }
 
 @media (width < 900px) {
@@ -46,11 +42,18 @@
     left: 0;
     flex-direction: column;
     transform: translateY(-100%);
-    background-color: $primaryClr;
+    background-color: $accentClr;
     width: 100%;
     padding-block: 3rem;
     transition: 0.3s ease-in;
-    z-index: 1;
+    z-index: -1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 1s ease;
+
+    // .nav-list-item {
+    //   transform: translateY(20px);
+    // }
   }
 
   .star {
@@ -66,3 +69,15 @@
     }
   }
 }
+
+@media (width < 47.875rem) {
+  .article-container {
+    margin-block: 0 !important;
+  }
+  .content-wrapper {
+    padding-block: 5rem;
+  }
+  .about-card {
+    flex-direction: column-reverse !important;
+  }
+} ;

@@ -4,6 +4,7 @@
 */
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 html,
@@ -160,9 +161,6 @@ table {
   .ham {
     display: none;
   }
-  .nav-list {
-    transform: translateY(0);
-  }
 }
 @media (width < 900px) {
   header {
@@ -179,11 +177,14 @@ table {
     left: 0;
     flex-direction: column;
     transform: translateY(-100%);
-    background-color: #d3d5d4;
+    background-color: #274c77;
     width: 100%;
     padding-block: 3rem;
     transition: 0.3s ease-in;
-    z-index: 1;
+    z-index: -1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 1s ease;
   }
   .star {
     width: 30px !important;
@@ -197,42 +198,86 @@ table {
     right: 0 !important;
   }
 }
+@media (width < 47.875rem) {
+  .article-container {
+    margin-block: 0 !important;
+  }
+  .content-wrapper {
+    padding-block: 5rem;
+  }
+  .about-card {
+    flex-direction: column-reverse !important;
+  }
+}
+@font-face {
+  font-family: cool-regular;
+  src: url(/src/assets/fonts/coolvetica/coolvetica-rg.otf);
+}
+@font-face {
+  font-family: cool-bold;
+  src: url(/src/assets/fonts/coolvetica/coolvetica-compressed-hv.otf);
+}
+@font-face {
+  font-family: gilroy-heavy;
+  src: url(/src/assets/fonts/Gilroy-Heavy.ttf);
+}
+@font-face {
+  font-family: gilroy-bold;
+  src: url(/src/assets/fonts/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: gilroy-medium;
+  src: url(/src/assets/fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: gilroy-regular;
+  src: url(/src/assets/fonts/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: gilroy-thin;
+  src: url(/src/assets/fonts/Gilroy-Light.ttf);
+}
 header {
-  padding-block: 3rem;
+  padding-block: 1.5em;
   position: fixed;
-  width: 100%;
+  width: min(90%, 77em);
   z-index: 1;
-  backdrop-filter: blur(100px);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #274c77;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-family: gilroy-bold;
+  box-shadow: 0px 5px 45px -10px #000000;
 }
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: min(10%, 12.5rem);
+  padding-inline: min(7%, 12.5rem);
 }
 header nav ul {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  font-size: clamp(1rem, 0.5037rem + 0.8824vw, 1.5625rem);
 }
 header nav ul a {
   text-decoration: none;
-  color: #777777;
+  color: #6096ba;
   text-transform: uppercase;
   cursor: pointer;
 }
 header nav ul a:hover {
-  color: #282524;
+  color: #ffffff;
 }
 header nav img {
   object-fit: contain;
-  max-width: 9.375rem;
+  max-width: 15rem;
 }
 
 .scroll-up header {
-  padding-block: 1rem;
+  margin-top: -100%;
 }
 
 .ham {
@@ -256,7 +301,7 @@ header nav img {
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #000;
+  stroke: #fff;
   stroke-width: 5.5;
   stroke-linecap: round;
 }
@@ -289,80 +334,78 @@ header nav img {
   stroke-dashoffset: -64px;
 }
 
-@font-face {
-  font-family: cool-regular;
-  src: url(/src/assets/fonts/coolvetica/coolvetica-rg.otf);
-}
-@font-face {
-  font-family: cool-bold;
-  src: url(/src/assets/fonts/coolvetica/coolvetica-compressed-hv.otf);
-}
 .about {
   text-align: center;
 }
 .about .banner {
-  background-color: #9b9080;
+  background-color: #274c77;
   padding-block: 1em;
   padding-inline: min(10%, 12.5rem);
   display: flex;
   justify-content: space-between;
 }
 .about .banner p {
-  color: #d3d5d4;
-  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
+  color: #ffffff;
 }
 .about .article-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 7rem;
   margin-block: min(10%, 7rem);
 }
 .about .article-container article {
   display: flex;
-  gap: 6.25rem;
+  align-items: center;
   text-align: start;
   width: 100%;
-  max-width: 1200px;
   user-select: none;
+}
+.about .article-container article > * {
+  flex: 1;
 }
 .about .article-container article img {
   width: 100%;
-  max-width: 500px;
+  object-fit: cover;
 }
-.about .article-container article span {
-  background-color: #a4c1bf;
-  color: #d3d5d4;
+.about .article-container article .content-wrapper {
+  display: grid;
+  place-items: center;
+}
+.about .article-container article .content-wrapper div {
+  padding-inline: 1.5em;
+}
+.about .article-container article .content-wrapper div span {
+  background-color: #274c77;
+  color: #ffffff;
   padding: 0.3rem;
   border-radius: 5px;
   font-size: 0.625rem;
-  letter-spacing: 3px;
+  font-family: gilroy-bold;
 }
-.about .article-container article h2 {
-  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+.about .article-container article .content-wrapper div h2 {
+  font-size: clamp(2rem, 0.6299rem + 1.5584vw, 3.75rem);
+  margin-block: 1.125rem;
+  font-family: gilroy-medium;
 }
-.about .article-container article p {
-  font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
-  color: #777777;
+.about .article-container article .content-wrapper div p {
+  color: #5f5f5f;
   max-width: 50ch;
-  font-family: "Inter", sans-serif;
+  font-family: gilroy-medium;
   font-weight: 500;
+  margin-bottom: 1rem;
+}
+.about .article-container article .content-wrapper div ul {
+  list-style: square;
+  margin-left: 2rem;
+}
+.about .article-container article .content-wrapper div ul li {
+  color: #5f5f5f;
+  font-family: gilroy-thin;
   margin-bottom: 1rem;
 }
 .about .article-container article:nth-child(2) {
   flex-direction: row-reverse;
-}
-.about .article-container article ul {
-  list-style: square;
-  margin-left: 2rem;
-}
-.about .article-container article ul li {
-  color: #777777;
-  font-family: "Inter", sans-serif;
-  margin-bottom: 1rem;
 }
 
 .signup-bottom {
@@ -370,17 +413,17 @@ header nav img {
   gap: 1.5rem;
   padding: 3rem;
   align-items: center;
-  background-color: #9b9080;
+  background-color: #274c77;
 }
 .signup-bottom .bottom-text-container {
-  color: #d3d5d4;
+  color: #ffffff;
 }
 .signup-bottom .bottom-text-container h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  font-family: gilroy-bold;
 }
 .signup-bottom .bottom-text-container p {
-  font-family: "Inter", sans-serif;
   max-width: 60ch;
 }
 
@@ -390,7 +433,7 @@ header nav img {
   padding-block: 5rem;
   padding-inline: min(10%, 12.5rem);
   grid-gap: 1.5rem;
-  color: #d3d5d4;
+  color: #ffffff;
   background-color: #282524;
 }
 .contact .logo {
@@ -409,7 +452,7 @@ header nav img {
 }
 .contact article ul a {
   text-decoration: none;
-  color: #d3d5d4;
+  color: #ffffff;
 }
 .contact article ul a:hover {
   color: #29d3c5;
@@ -417,7 +460,7 @@ header nav img {
 
 footer {
   background-color: #282524;
-  color: #d3d5d4;
+  color: #ffffff;
   padding-block: 3rem;
   padding-inline: min(10%, 12.5rem);
 }
@@ -426,23 +469,21 @@ button {
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
-  font-family: cool-regular;
-  font-size: clamp(1rem, 0.5037rem + 0.8824vw, 1.5625rem);
+  font-family: gilroy-bold;
+  background-color: #6096ba;
+  color: #ffffff;
 }
 button:hover {
   background-color: #29d3c5;
-  color: #d3d5d4;
   border-color: transparent;
 }
 
 .login-button {
   background-color: transparent;
-  border: 1px solid #777777;
+  border: 1px solid #ffffff;
 }
 
 .signup-button {
-  background-color: #598986;
-  color: #d3d5d4;
   border-color: transparent;
 }
 
@@ -452,12 +493,14 @@ button:hover {
 
 .banner-signup-button {
   width: 100%;
+  border: none;
+  padding: 1rem 2rem;
 }
 
 body {
-  background-color: #d3d5d4;
+  background-color: #ffffff;
   color: #282524;
-  font-family: cool-regular;
+  font-family: gilroy-regular;
 }
 
 main {
@@ -471,18 +514,18 @@ main div {
   transform: translateY(15rem);
   height: max-content;
   position: relative;
+  line-height: 1.5;
 }
 main div h1 {
-  font-family: cool-bold;
-  font-size: clamp(3rem, -1.0666rem + 8.7013vw, 9.375rem);
+  font-family: gilroy-heavy;
+  font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
   text-transform: capitalize;
-  margin-bottom: 1.5rem;
 }
 main div p {
-  color: #777777;
+  color: #5f5f5f;
   font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
   max-width: 40ch;
-  line-height: 1.5;
+  margin-inline: auto;
 }
 main div .star {
   width: 60px;
@@ -516,7 +559,7 @@ main img {
 .pricing article {
   display: flex;
   padding: 1rem 2.5rem;
-  background-color: #fff;
+  background-color: #d4d4d4;
   border-radius: 10px;
   align-items: center;
   font-family: "Inter", sans-serif;
@@ -552,19 +595,19 @@ main img {
 }
 
 .section-title {
-  margin-block: min(10%, 7rem);
+  margin-block: min(20%, 7rem);
   text-align: center;
 }
 .section-title h1 {
   font-size: clamp(2rem, -1.0666rem + 8.7013vw, 3.75rem);
-  font-family: cool-regular;
+  font-family: gilroy-bold;
   text-transform: uppercase;
 }
 .section-title p {
-  color: #777777;
+  color: #5f5f5f;
   font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
   margin-inline: 1rem;
-  font-family: "Inter", sans-serif;
+  font-family: gilroy-regular;
 }
 
 dialog {

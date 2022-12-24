@@ -10,6 +10,37 @@
   src: url(/src/assets/fonts/coolvetica/coolvetica-compressed-hv.otf);
 }
 
+@font-face {
+  font-family: gilroy-heavy;
+  src: url(/src/assets/fonts/Gilroy-Heavy.ttf);
+}
+
+@font-face {
+  font-family: gilroy-bold;
+  src: url(/src/assets/fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+  font-family: gilroy-medium;
+  src: url(/src/assets/fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+  font-family: gilroy-regular;
+  src: url(/src/assets/fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: gilroy-thin;
+  src: url(/src/assets/fonts/Gilroy-Light.ttf);
+}
+
+$fontHeavy: gilroy-heavy;
+$font900: gilroy-bold;
+$font500: gilroy-medium;
+$font400: gilroy-regular;
+$font300: gilroy-thin;
+
 $interFont: "Inter", sans-serif;
 
 $fontRegular: cool-regular;

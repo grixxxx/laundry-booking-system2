@@ -5,7 +5,7 @@
   text-align: center;
 
   .banner {
-    background-color: $tertiaryClr;
+    background-color: $accentClr;
     padding-block: 1em;
     padding-inline: min(10%, 12.5rem);
     display: flex;
@@ -13,7 +13,6 @@
 
     p {
       color: $primaryClr;
-      font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
     }
   }
 
@@ -22,59 +21,70 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 7rem;
+
     margin-block: min(10%, 7rem);
 
     article {
       display: flex;
-      gap: 6.25rem;
+      align-items: center;
       text-align: start;
       width: 100%;
-      max-width: 1200px;
       user-select: none;
+
+      & > * {
+        flex: 1;
+      }
 
       img {
         width: 100%;
-        max-width: 500px;
+        object-fit: cover;
       }
 
-      span {
-        background-color: $bgAccentClr;
-        color: $primaryClr;
-        padding: 0.3rem;
-        border-radius: 5px;
-        font-size: 0.625rem;
-        letter-spacing: 3px;
-      }
+      .content-wrapper {
+        display: grid;
+        place-items: center;
 
-      h2 {
-        font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-      }
+        div {
+          padding-inline: 1.5em;
 
-      p {
-        font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.25rem);
-        color: $fadeClr;
-        max-width: 50ch;
-        font-family: $interFont;
-        font-weight: 500;
-        margin-bottom: 1rem;
+          span {
+            background-color: $accentClr;
+            color: $primaryClr;
+            padding: 0.3rem;
+            border-radius: 5px;
+            font-size: 0.625rem;
+            font-family: $font900;
+          }
+
+          h2 {
+            font-size: clamp(2rem, 0.6299rem + 1.5584vw, 3.75rem);
+            margin-block: 1.125rem;
+            font-family: $font500;
+          }
+
+          p {
+            color: $tertiaryClr;
+            max-width: 50ch;
+            font-family: $font500;
+            font-weight: 500;
+            margin-bottom: 1rem;
+          }
+
+          ul {
+            list-style: square;
+            margin-left: 2rem;
+
+            li {
+              color: $tertiaryClr;
+              font-family: $font300;
+              margin-bottom: 1rem;
+            }
+          }
+        }
       }
 
       &:nth-child(2) {
         flex-direction: row-reverse;
-      }
-
-      ul {
-        list-style: square;
-        margin-left: 2rem;
-
-        li {
-          color: $fadeClr;
-          font-family: $interFont;
-          margin-bottom: 1rem;
-        }
       }
     }
   }

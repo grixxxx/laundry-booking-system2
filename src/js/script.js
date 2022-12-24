@@ -9,6 +9,10 @@ window.addEventListener("scroll", () => {
     ? body.classList.remove("scroll-up")
     : body.classList.add("scroll-up");
 
+  if (currentScroll <= lastScroll) {
+    body.classList.remove("scroll-up");
+  }
+
   lastScroll = currentScroll;
 });
 
@@ -17,21 +21,18 @@ const hamburgerMenu = document.querySelector(".ham");
 hamburgerMenu.addEventListener("click", () => {
   const navList = document.querySelector(".nav-list");
 
-  if (!hamburgerMenu.classList.contains("active")) {
-    navList.style.cssText = "transform: translateY(-100%)";
-    document.body.style.overflow = "visible";
-  } else {
-    navList.style.cssText = "transform: translateY(13rem)";
-    document.body.style.overflow = "hidden";
-  }
-
   const navListItem = document.querySelectorAll(".nav-list-item");
+
+  if (!hamburgerMenu.classList.contains("active")) {
+    navList.style.cssText = "none";
+  } else {
+    navList.style.cssText = "transform: translateY(13rem);";
+  }
 
   navListItem.forEach((item) => {
     item.addEventListener("click", () => {
-      navList.style.cssText = "transform: translateY(-100%)";
+      navList.style.cssText = "none";
       hamburgerMenu.classList.remove("active");
-      document.body.style.overflow = "visible";
     });
   });
 });

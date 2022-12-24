@@ -10,7 +10,7 @@
 body {
   background-color: $primaryClr;
   color: $secondaryClr;
-  font-family: $fontRegular;
+  font-family: $font400;
 }
 
 main {
@@ -24,19 +24,19 @@ main {
     transform: translateY(15rem);
     height: max-content;
     position: relative;
+    line-height: 1.5;
 
     h1 {
-      font-family: $fontBold;
-      font-size: clamp(3rem, -1.0666rem + 8.7013vw, 9.375rem);
+      font-family: $fontHeavy;
+      font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
       text-transform: capitalize;
-      margin-bottom: 1.5rem;
     }
 
     p {
-      color: $fadeClr;
+      color: $tertiaryClr;
       font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
       max-width: 40ch;
-      line-height: 1.5;
+      margin-inline: auto;
     }
 
     .star {
@@ -77,7 +77,7 @@ main {
   article {
     display: flex;
     padding: 1rem 2.5rem;
-    background-color: #fff;
+    background-color: $pricingBg;
     border-radius: 10px;
     align-items: center;
     font-family: $interFont;
@@ -120,19 +120,19 @@ main {
 }
 
 .section-title {
-  margin-block: min(10%, 7rem);
+  margin-block: min(20%, 7rem);
   text-align: center;
 
   h1 {
     font-size: clamp(2rem, -1.0666rem + 8.7013vw, 3.75rem);
-    font-family: $fontRegular;
+    font-family: $font900;
     text-transform: uppercase;
   }
   p {
-    color: $fadeClr;
+    color: $tertiaryClr;
     font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
     margin-inline: 1rem;
-    font-family: $interFont;
+    font-family: $font400;
   }
 }
 

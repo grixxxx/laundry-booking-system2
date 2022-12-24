@@ -1,46 +1,52 @@
 @use "./colors" as *;
+@use "./font" as *;
 
 header {
-  padding-block: 3rem;
+  padding-block: 1.5em;
   position: fixed;
-  width: 100%;
+  width: min(90%, 77em);
   z-index: 1;
-  backdrop-filter: blur(100px);
-  transition: all 0.2s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: $accentClr;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-family: $font900;
+  box-shadow: 0px 5px 45px -10px #000000;
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: min(10%, 12.5rem);
+    padding-inline: min(7%, 12.5rem);
 
     ul {
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      font-size: clamp(1rem, 0.5037rem + 0.8824vw, 1.5625rem);
 
       a {
         text-decoration: none;
-        color: $fadeClr;
+        color: $buttonClr;
         text-transform: uppercase;
         cursor: pointer;
 
         &:hover {
-          color: $secondaryClr;
+          color: $primaryClr;
         }
       }
     }
 
     img {
       object-fit: contain;
-      max-width: 9.375rem;
+      max-width: 15rem;
     }
   }
 }
 
 .scroll-up header {
-  padding-block: 1rem;
+  margin-top: -100%;
 }
 
 // NOTE: HAMBURGER MENU BUTTON
@@ -63,7 +69,7 @@ header {
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: #000;
+  stroke: #fff;
   stroke-width: 5.5;
   stroke-linecap: round;
 }
