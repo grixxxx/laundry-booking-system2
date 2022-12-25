@@ -9,7 +9,8 @@
     padding-block: 1em;
     padding-inline: min(10%, 12.5rem);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
     p {
       color: $primaryClr;

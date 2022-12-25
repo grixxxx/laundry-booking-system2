@@ -50,3 +50,11 @@ const loginButton = document
   .addEventListener("click", () => {
     loginModal.showModal();
   });
+
+const signupModal = document.querySelector(".signup-modal");
+
+const signupButton = document
+  .querySelector(".signup-button ")
+  .addEventListener("click", () => {
+    signupModal.showModal();
+  });

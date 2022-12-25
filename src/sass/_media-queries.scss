@@ -77,4 +77,12 @@
   article#about-card {
     flex-direction: column-reverse;
   }
-} ;
+}
+
+@media (height < 48rem) {
+  .main-title-container {
+    transform: none;
+  }
+}
+
+

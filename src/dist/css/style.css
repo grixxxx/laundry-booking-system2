@@ -231,6 +231,11 @@ table {
     flex-direction: column-reverse;
   }
 }
+@media (height < 48rem) {
+  .main-title-container {
+    transform: none;
+  }
+}
 header {
   padding-block: 1.5em;
   position: fixed;
@@ -337,7 +342,8 @@ header nav img {
   padding-block: 1em;
   padding-inline: min(10%, 12.5rem);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .about .banner p {
   color: #ffffff;
@@ -490,7 +496,7 @@ button:hover {
   padding: 1rem 2rem;
 }
 
-.login-modal {
+dialog {
   text-align: center;
   padding: min(10%, 5rem);
   border: none;
@@ -498,30 +504,30 @@ button:hover {
   background-color: #274c77;
   color: #ffffff;
 }
-.login-modal h1 {
+dialog h1 {
   font-size: 3.75rem;
   font-size: clamp(2rem, -1.0666rem + 8.7013vw, 3.75rem);
   font-weight: gilroy-bold;
 }
-.login-modal p {
+dialog p {
   margin-bottom: 2em;
 }
-.login-modal::backdrop {
+dialog::backdrop {
   backdrop-filter: blur(10px);
 }
-.login-modal form {
+dialog form {
   display: flex;
   gap: 0.875rem;
   flex-direction: column;
 }
-.login-modal form button {
+dialog form button {
   border: none;
   padding: 1em;
 }
-.login-modal form button:nth-child(4) {
+dialog form .modal-second-button {
   background-color: transparent;
 }
-.login-modal form button:nth-child(4):hover {
+dialog form .modal-second-button:hover {
   color: #3c6a8a;
 }
 
@@ -534,19 +540,20 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   position: relative;
 }
 main div {
   text-align: center;
-  transform: translateY(15rem);
+  transform: translateY(-10rem);
   height: max-content;
   position: relative;
   line-height: 1.5;
 }
 main div h1 {
   font-family: gilroy-heavy;
-  font-size: clamp(2rem, -1.0666rem + 8.7013vw, 6.25rem);
+  font-size: clamp(1.8rem, -1.0666rem + 8.7013vw, 6.25rem);
   text-transform: capitalize;
 }
 main div p {

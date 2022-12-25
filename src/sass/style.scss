@@ -17,19 +17,20 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   position: relative;
 
   div {
     text-align: center;
-    transform: translateY(15rem);
+    transform: translateY(-10rem);
     height: max-content;
     position: relative;
     line-height: 1.5;
 
     h1 {
       font-family: $fontHeavy;
-      font-size: clamp(2rem, -1.0666rem + 8.7013vw, 6.25rem);
+      font-size: clamp(1.8rem, -1.0666rem + 8.7013vw, 6.25rem);
       text-transform: capitalize;
     }
 
