@@ -41,6 +41,7 @@ header {
     img {
       object-fit: contain;
       max-width: 15rem;
+      z-index: 1;
     }
   }
 }

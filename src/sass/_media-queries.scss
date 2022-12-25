@@ -29,9 +29,6 @@
   header {
     position: relative;
   }
-  main > div {
-    transform: translateY(20rem) !important;
-  }
 
   .ham {
     display: block;
@@ -56,28 +53,28 @@
     // }
   }
 
-  .star {
-    width: 30px !important;
+  main > div > img.star {
+    width: 30px;
 
     &-one {
-      top: -3rem !important;
-      left: 0 !important;
+      top: -3rem;
+      left: 0;
     }
     &-two {
-      bottom: -3rem !important;
-      right: 0 !important;
+      bottom: -3rem;
+      right: 0;
     }
   }
 }
 
 @media (width < 47.875rem) {
-  .article-container {
-    margin-block: 0 !important;
+  .about > div.article-container {
+    margin-block: 0;
   }
   .content-wrapper {
     padding-block: 5rem;
   }
-  .about-card {
-    flex-direction: column-reverse !important;
+  article#about-card {
+    flex-direction: column-reverse;
   }
 } ;

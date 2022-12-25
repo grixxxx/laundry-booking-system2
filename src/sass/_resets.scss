@@ -1,3 +1,5 @@
+@use "./font" as *;
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -6,6 +8,11 @@
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
+}
+
+input {
+  font-family: $font400;
+  padding: 1rem;
 }
 
 html,

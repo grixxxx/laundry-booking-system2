@@ -1,10 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
+@font-face {
+  font-family: gilroy-heavy;
+  src: url(/src/assets/fonts/Gilroy-Heavy.ttf);
+}
+@font-face {
+  font-family: gilroy-bold;
+  src: url(/src/assets/fonts/Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: gilroy-medium;
+  src: url(/src/assets/fonts/Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: gilroy-regular;
+  src: url(/src/assets/fonts/Gilroy-Regular.ttf);
+}
+@font-face {
+  font-family: gilroy-thin;
+  src: url(/src/assets/fonts/Gilroy-Light.ttf);
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
+}
+
+input {
+  font-family: gilroy-regular;
+  padding: 1rem;
 }
 
 html,
@@ -166,9 +191,6 @@ table {
   header {
     position: relative;
   }
-  main > div {
-    transform: translateY(20rem) !important;
-  }
   .ham {
     display: block;
   }
@@ -186,56 +208,28 @@ table {
     border-bottom-right-radius: 20px;
     transition: 1s ease;
   }
-  .star {
-    width: 30px !important;
+  main > div > img.star {
+    width: 30px;
   }
-  .star-one {
-    top: -3rem !important;
-    left: 0 !important;
+  main > div > img.star-one {
+    top: -3rem;
+    left: 0;
   }
-  .star-two {
-    bottom: -3rem !important;
-    right: 0 !important;
+  main > div > img.star-two {
+    bottom: -3rem;
+    right: 0;
   }
 }
 @media (width < 47.875rem) {
-  .article-container {
-    margin-block: 0 !important;
+  .about > div.article-container {
+    margin-block: 0;
   }
   .content-wrapper {
     padding-block: 5rem;
   }
-  .about-card {
-    flex-direction: column-reverse !important;
+  article#about-card {
+    flex-direction: column-reverse;
   }
-}
-@font-face {
-  font-family: cool-regular;
-  src: url(/src/assets/fonts/coolvetica/coolvetica-rg.otf);
-}
-@font-face {
-  font-family: cool-bold;
-  src: url(/src/assets/fonts/coolvetica/coolvetica-compressed-hv.otf);
-}
-@font-face {
-  font-family: gilroy-heavy;
-  src: url(/src/assets/fonts/Gilroy-Heavy.ttf);
-}
-@font-face {
-  font-family: gilroy-bold;
-  src: url(/src/assets/fonts/Gilroy-Bold.ttf);
-}
-@font-face {
-  font-family: gilroy-medium;
-  src: url(/src/assets/fonts/Gilroy-Medium.ttf);
-}
-@font-face {
-  font-family: gilroy-regular;
-  src: url(/src/assets/fonts/Gilroy-Regular.ttf);
-}
-@font-face {
-  font-family: gilroy-thin;
-  src: url(/src/assets/fonts/Gilroy-Light.ttf);
 }
 header {
   padding-block: 1.5em;
@@ -274,6 +268,7 @@ header nav ul a:hover {
 header nav img {
   object-fit: contain;
   max-width: 15rem;
+  z-index: 1;
 }
 
 .scroll-up header {
@@ -434,34 +429,32 @@ header nav img {
   padding-inline: min(10%, 12.5rem);
   grid-gap: 1.5rem;
   color: #ffffff;
-  background-color: #282524;
+  background-color: #274c77;
 }
 .contact .logo {
   width: 50px;
 }
 .contact article h2 {
   font-size: 1.25rem;
-}
-.contact article p {
-  font-family: "Inter", sans-serif;
+  font-family: gilroy-bold;
+  margin-bottom: 1.5rem;
 }
 .contact article ul {
   display: flex;
   gap: 1.5rem;
-  font-family: "Inter", sans-serif;
 }
 .contact article ul a {
   text-decoration: none;
   color: #ffffff;
 }
 .contact article ul a:hover {
-  color: #29d3c5;
+  color: #3c6a8a;
 }
 
 footer {
-  background-color: #282524;
+  background-color: #274c77;
   color: #ffffff;
-  padding-block: 3rem;
+  padding-block: 1em;
   padding-inline: min(10%, 12.5rem);
 }
 
@@ -474,7 +467,7 @@ button {
   color: #ffffff;
 }
 button:hover {
-  background-color: #29d3c5;
+  background-color: #3c6a8a;
   border-color: transparent;
 }
 
@@ -495,6 +488,41 @@ button:hover {
   width: 100%;
   border: none;
   padding: 1rem 2rem;
+}
+
+.login-modal {
+  text-align: center;
+  padding: min(10%, 5rem);
+  border: none;
+  border-radius: 10px;
+  background-color: #274c77;
+  color: #ffffff;
+}
+.login-modal h1 {
+  font-size: 3.75rem;
+  font-size: clamp(2rem, -1.0666rem + 8.7013vw, 3.75rem);
+  font-weight: gilroy-bold;
+}
+.login-modal p {
+  margin-bottom: 2em;
+}
+.login-modal::backdrop {
+  backdrop-filter: blur(10px);
+}
+.login-modal form {
+  display: flex;
+  gap: 0.875rem;
+  flex-direction: column;
+}
+.login-modal form button {
+  border: none;
+  padding: 1em;
+}
+.login-modal form button:nth-child(4) {
+  background-color: transparent;
+}
+.login-modal form button:nth-child(4):hover {
+  color: #3c6a8a;
 }
 
 body {
@@ -518,7 +546,7 @@ main div {
 }
 main div h1 {
   font-family: gilroy-heavy;
-  font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
+  font-size: clamp(2rem, -1.0666rem + 8.7013vw, 6.25rem);
   text-transform: capitalize;
 }
 main div p {
@@ -543,7 +571,7 @@ main img {
   position: absolute;
   bottom: 0;
   z-index: -1;
-  max-width: 46.875rem;
+  max-width: 70rem;
   width: 100%;
 }
 
@@ -562,12 +590,12 @@ main img {
   background-color: #d4d4d4;
   border-radius: 10px;
   align-items: center;
-  font-family: "Inter", sans-serif;
   transition: 0.2s ease-in;
 }
 .pricing article:hover {
-  background-color: #29d3c5;
+  background-color: #3c6a8a;
   transform: scale(1.02);
+  color: #ffffff;
 }
 .pricing article:hover img {
   transform: scale(1.2);
@@ -584,6 +612,7 @@ main img {
   margin-left: auto;
   font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
   transition: 0.2s ease-in;
+  font-family: gilroy-medium;
 }
 .pricing article p span {
   font-size: 1rem;
@@ -608,23 +637,6 @@ main img {
   font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
   margin-inline: 1rem;
   font-family: gilroy-regular;
-}
-
-dialog {
-  text-align: center;
-  padding: 5rem;
-  border: none;
-}
-dialog::backdrop {
-  backdrop-filter: blur(10px);
-}
-dialog form {
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-}
-dialog form input {
-  padding: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

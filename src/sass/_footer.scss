@@ -29,7 +29,7 @@
   padding-inline: min(10%, 12.5rem);
   grid-gap: 1.5rem;
   color: $primaryClr;
-  background-color: $secondaryClr;
+  background-color: $accentClr;
 
   .logo {
     width: 50px;
@@ -38,16 +38,13 @@
   article {
     h2 {
       font-size: 1.25rem;
-    }
-
-    p {
-      font-family: $interFont;
+      font-family: $font900;
+      margin-bottom: 1.5rem;
     }
 
     ul {
       display: flex;
       gap: 1.5rem;
-      font-family: $interFont;
 
       a {
         text-decoration: none;
@@ -62,8 +59,8 @@
 }
 
 footer {
-  background-color: $secondaryClr;
+  background-color: $accentClr;
   color: $primaryClr;
-  padding-block: 3rem;
+  padding-block: 1em;
   padding-inline: min(10%, 12.5rem);
 }

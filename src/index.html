@@ -65,14 +65,16 @@
     <dialog class="login-modal">
       <h1>LOGIN</h1>
       <p>
-        Welcome Back! to stay connected with us please login with your personal
-        information using email address and password.
+        Welcome Back! to stay connected with us login with your personal
+        information.
       </p>
       <form action="#">
         <input type="email" placeholder="Email" required />
         <input type="password" placeholder="Password" required />
-        <button type="submit">LOGIN</button>
-        <button>DON’T HAVE AN ACCOUNT? CLICK HERE</button>
+        <button type="submit" class="modal-login-button">LOGIN</button>
+        <button class="modal-signup-button">
+          DON’T HAVE AN ACCOUNT? CLICK HERE
+        </button>
       </form>
     </dialog>
 
@@ -103,7 +105,7 @@
       </div>
 
       <div class="article-container">
-        <article class="about-card">
+        <article class="about-card" id="about-card">
           <img src="./assets/schedule.png" alt="schedule" loading="lazy" />
           <section class="content-wrapper">
             <div>
@@ -118,7 +120,7 @@
             </div>
           </section>
         </article>
-        <article class="about-card">
+        <article class="about-card" id="about-card">
           <img src="./assets/pickup.png" alt="pickup" loading="lazy" />
           <section class="content-wrapper">
             <div>
@@ -131,7 +133,7 @@
             </div>
           </section>
         </article>
-        <article class="about-card">
+        <article class="about-card" id="about-card">
           <img src="./assets/deliver.png" alt="delivery" loading="lazy" />
           <section class="content-wrapper">
             <div>

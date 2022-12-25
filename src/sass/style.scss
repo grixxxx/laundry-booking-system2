@@ -4,6 +4,7 @@
 @forward "./about";
 @forward "./footer";
 @forward "./buttons";
+@forward "./forms";
 @use "./font" as *;
 @use "./colors" as *;
 
@@ -28,7 +29,7 @@ main {
 
     h1 {
       font-family: $fontHeavy;
-      font-size: clamp(3rem, -1.0666rem + 8.7013vw, 6.25rem);
+      font-size: clamp(2rem, -1.0666rem + 8.7013vw, 6.25rem);
       text-transform: capitalize;
     }
 
@@ -58,7 +59,7 @@ main {
     position: absolute;
     bottom: 0;
     z-index: -1;
-    max-width: 46.875rem;
+    max-width: 70rem;
     width: 100%;
   }
 }
@@ -80,12 +81,12 @@ main {
     background-color: $pricingBg;
     border-radius: 10px;
     align-items: center;
-    font-family: $interFont;
     transition: 0.2s ease-in;
 
     &:hover {
       background-color: $hoverClr;
       transform: scale(1.02);
+      color: $primaryClr;
 
       & img {
         transform: scale(1.2);
@@ -105,6 +106,7 @@ main {
       margin-left: auto;
       font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
       transition: 0.2s ease-in;
+      font-family: $font500;
 
       span {
         font-size: 1rem;
@@ -133,25 +135,5 @@ main {
     font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
     margin-inline: 1rem;
     font-family: $font400;
-  }
-}
-
-dialog {
-  text-align: center;
-  padding: 5rem;
-  border: none;
-
-  &::backdrop {
-    backdrop-filter: blur(10px);
-  }
-
-  form {
-    display: flex;
-    gap: 1.5rem;
-    flex-direction: column;
-
-    input {
-      padding: 1rem;
-    }
   }
 }
