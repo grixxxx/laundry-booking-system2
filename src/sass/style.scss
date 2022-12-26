@@ -15,15 +15,25 @@ body {
 }
 
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100vh;
   position: relative;
 
   div {
     text-align: center;
+    -webkit-transform: translateY(-10rem);
+    -ms-transform: translateY(-10rem);
     transform: translateY(-10rem);
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
     position: relative;
     line-height: 1.5;
@@ -59,7 +69,6 @@ main {
   img {
     position: absolute;
     bottom: 0;
-    z-index: -1;
     max-width: 70rem;
     width: 100%;
   }
@@ -70,6 +79,7 @@ main {
   margin-bottom: 5rem;
 
   .pricing-container {
+    display: -ms-grid;
     display: grid;
 
     grid-column-gap: 3.75rem;
@@ -77,19 +87,32 @@ main {
   }
 
   article {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 1rem 2.5rem;
-    background-color: $pricingBg;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03),
+      0 13px 30px 0 rgba(7, 6, 41, 0.16);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03),
+      0 13px 30px 0 rgba(7, 6, 41, 0.16);
     border-radius: 10px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
 
     &:hover {
       background-color: $hoverClr;
+      -webkit-transform: scale(1.02);
+      -ms-transform: scale(1.02);
       transform: scale(1.02);
       color: $primaryClr;
 
       & img {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
         transform: scale(1.2);
       }
 
@@ -106,6 +129,8 @@ main {
     p {
       margin-left: auto;
       font-size: clamp(1rem, 0.6299rem + 1.5584vw, 1.875rem);
+      -webkit-transition: 0.2s ease-in;
+      -o-transition: 0.2s ease-in;
       transition: 0.2s ease-in;
       font-family: $font500;
 
@@ -118,6 +143,8 @@ main {
   img {
     max-width: 50px;
     opacity: 0.5;
+    -webkit-transition: 0.2s ease-in;
+    -o-transition: 0.2s ease-in;
     transition: 0.2s ease-in;
   }
 }

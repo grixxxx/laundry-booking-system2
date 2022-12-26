@@ -4,10 +4,18 @@
   "description": "",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel  src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "build:postcss": "postcss src/dist/css/style.css -o public/style.css",
+    "watch:css": "postcss src/dist/css/style.css -o public/style.css -w"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "parcel": "^2.8.2",
+    "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0"
+  }
 }

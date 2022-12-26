@@ -3,12 +3,247 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Hassle free and affordable dry cleaning and laundry delivered to your home. ">
+    <meta property="og:description" content="Hassle free and affordable dry cleaning and laundry delivered to your home.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/logoIcon.bcf0d95e.png" type="image/x-icon">
+    <meta name="author" content="Delmer John Ballesteros">
     <title>Laundry Booking System</title>
-    <link rel="stylesheet" href="/index.98f508ad.css">
+    <link rel="stylesheet" href="/index.83d9161e.css">
   </head>
-  <body>
-    <h1>Hello World</h1>
-    <script src="/index.44983732.js"></script>
+  <body oncontextmenu="return true">
+    <header>
+      <!-- NOTE: NAV -->
+      <nav>
+        <img src="/laundryLogo.89e90bb0.png" alt="business logo">
+        <ul class="nav-list">
+          <a href="#" class="nav-list-item">
+            <li>Home</li>
+          </a>
+          <a href="#about" class="nav-list-item">
+            <li>About</li>
+          </a>
+          <a href="#pricing" class="nav-list-item">
+            <li>Pricing</li>
+          </a>
+          <a href="#" class="nav-list-item">
+            <li>Contact</li>
+          </a>
+          <button class="login-button nav-list-item">LOGIN</button>
+          <button class="signup-button nav-list-item">SIGNUP</button>
+        </ul>
+        <svg class="ham hamRotate ham8" viewbox="0 0 100 100" width="60" onclick="this.classList.toggle('active')">
+          <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+          <path class="line middle" d="m 30,50 h 40"></path>
+          <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+        </svg>
+      </nav>
+    </header>
+
+    <!-- NOTE: LOGIN FORM -->
+
+    <dialog class="login-modal">
+      <h1>LOGIN</h1>
+      <p>
+        Welcome Back! to stay connected with us login with your personal
+        information.
+      </p>
+      <form action="#">
+        <input type="email" placeholder="Email" required="">
+        <input type="password" placeholder="Password" required="">
+        <button type="submit" class="modal-login-button">LOGIN</button>
+        <button class="modal-second-button">
+          Don't have an account? Sign up for free
+        </button>
+      </form>
+    </dialog>
+
+    <!-- NOTE: SIGNUP FORM -->
+
+    <dialog class="signup-modal">
+      <h1>SIGNUP</h1>
+      <p>
+        Save more time with our free dry cleaning pickup and delivery service.
+        Get one month free pickup and delivery for new members.
+      </p>
+      <form action="#">
+        <input type="name" placeholder="Full Name" required="">
+        <input type="address" placeholder="Full Address" required="">
+        <input type="phone" placeholder="Phone Number" required="">
+        <input type="email" placeholder="Email" required="">
+        <input type="password" placeholder="Password" required="">
+        <button type="submit" class="modal-login-button">SIGNUP</button>
+        <button class="modal-second-button">
+          ALREADY REGISTERED? CLICK HERE
+        </button>
+      </form>
+    </dialog>
+
+    <!-- NOTE: MAIN -->
+
+    <main>
+      <div class="main-title-container">
+        <img class="star star-one" src="/stars.0bccd6c6.png" alt="stars">
+        <h1>laundry booking system</h1>
+        <p>
+          Hassle free and affordable dry cleaning and laundry delivered to your
+          home.
+        </p>
+        <img class="star star-two" src="/stars.0bccd6c6.png" alt="stars">
+      </div>
+      <img src="/basket.90e5802b.png" alt="basket of clothes">
+    </main>
+
+    <!-- NOTE: ABOUT -->
+
+    <section class="about">
+      <div class="banner">
+        <p>Schedule Pickup and Delivery</p>
+        <p>Customize your Service</p>
+        <p>Pay via Card or Cash</p>
+      </div>
+      <div class="section-title" id="about">
+        <h1>how we works.</h1>
+        <p>Start washing with us to save time, money, and energy.</p>
+      </div>
+
+      <div class="article-container">
+        <article class="about-card" id="about-card">
+          <img src="/schedule.a7b1dd70.png" alt="schedule" loading="lazy">
+          <section class="content-wrapper">
+            <div>
+              <span>SCHEDULE</span>
+              <h2>Schedule a Pick Up</h2>
+              <p>How to Schedule</p>
+              <ul>
+                <li>Click signup button</li>
+                <li>Search some laundry</li>
+                <li>Start schedule your laundry</li>
+              </ul>
+            </div>
+          </section>
+        </article>
+        <article class="about-card" id="about-card">
+          <img src="/pickup.794ae433.png" alt="pickup" loading="lazy">
+          <section class="content-wrapper">
+            <div>
+              <span>PICKUP</span>
+              <h2>We Pickup</h2>
+              <p>
+                We’ll pick up your clothes wherever you are, please wait and
+                don’t forget to enjoy your cofee.
+              </p>
+            </div>
+          </section>
+        </article>
+        <article class="about-card" id="about-card">
+          <img src="/deliver.dd4abf6a.png" alt="delivery" loading="lazy">
+          <section class="content-wrapper">
+            <div>
+              <span>DELIVERY</span>
+              <h2>We Deliver</h2>
+              <p>
+                Delivering laundry is not a trivial thing, we will do our best
+                so that the delivery arrives in a timely manner and the goods
+                are in good condition.
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+    <!-- NOTE: SIGNUP BANNER -->
+
+    <section class="signup-bottom">
+      <div class="bottom-text-container">
+        <h1>FREE PICKUP AND DELIVERY</h1>
+        <p>
+          Save more time with our free dry cleaning pickup and delivery service
+          throughout the Ilagan City, Isabela area. Get one month free pickup
+          and delivery for new members.
+        </p>
+      </div>
+
+      <div class="bottom-button-container">
+        <button class="banner-signup-button">GET STARTED</button>
+      </div>
+    </section>
+
+    <!--  NOTE: PRICING -->
+
+    <section class="pricing" id="pricing">
+      <div class="section-title">
+        <h1>pricing.</h1>
+        <p>choose the right garments for your needs</p>
+      </div>
+
+      <div class="pricing-container">
+        <article>
+          <img src="/tshirt.26bd9dad.png" alt="Shirt">
+          <h2>Shirt</h2>
+          <p>₱10.<span>00</span></p>
+        </article>
+        <article>
+          <img src="/hooded-jacket.b966edce.png" alt="jacket">
+          <h2>Jacket</h2>
+          <p>₱60.<span>00</span></p>
+        </article>
+        <article>
+          <img src="/football-shorts.2f9df6f4.png" alt="Short">
+          <h2>Short</h2>
+          <p>₱20.<span>00</span></p>
+        </article>
+        <article>
+          <img src="/underwear.2b2a2fdc.png" alt="underwear">
+          <h2>Underwear</h2>
+          <p>₱5.<span>00</span></p>
+        </article>
+        <article>
+          <img src="/trousers.66231d18.png" alt="Pants">
+          <h2>Pants</h2>
+          <p>₱4.<span>00</span></p>
+        </article>
+        <article>
+          <img src="/bed-sheets.c2cb9a98.png" alt="Blanket">
+          <h2>Blanket</h2>
+          <p>₱100.<span>00</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- NOTE: CONTACT -->
+
+    <section class="contact">
+      <div class="logo">
+        <a href="#"><img src="/laundryLogo.89e90bb0.png" alt="logo"></a>
+      </div>
+
+      <article>
+        <h2>Contact:</h2>
+        <p>laundrybookingsystem@gmail.com</p>
+        <p>(+63) 964-5421-647</p>
+      </article>
+      <article>
+        <h2>Address</h2>
+        <p>Guyabano st., Calamagui 1st City of ilagan, Isabela</p>
+      </article>
+      <article>
+        <h2>Social:</h2>
+        <ul>
+          <a href="#">
+            <li>Instagram</li>
+          </a>
+          <a href="#"><li>Twitter</li></a>
+          <a href="#"><li>Facebook</li></a>
+        </ul>
+      </article>
+    </section>
+
+    <!-- NOTE: FOOTER -->
+
+    <footer><p>© 2022 Laundry Booking System. All Rights Reserved.</p></footer>
+
+    <script src="/index.09c24910.js"></script>
   <script src="/LaundryBookingSystem.59712999.js"></script></body>
 </html>
