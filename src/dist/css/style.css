@@ -223,9 +223,10 @@ table {
 @media (width < 47.875rem) {
   .about > div.article-container {
     margin-block: 0;
+    border: 1px solid #5f5f5f;
   }
   .content-wrapper {
-    padding-block: 5rem;
+    padding-block: 3em;
   }
   article#about-card {
     flex-direction: column-reverse;
@@ -375,6 +376,7 @@ header nav img {
 }
 .about .article-container article .content-wrapper div {
   padding-inline: 1.5em;
+  margin-left: 2rem;
 }
 .about .article-container article .content-wrapper div span {
   background-color: #274c77;
@@ -396,14 +398,16 @@ header nav img {
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.about .article-container article .content-wrapper div ul {
-  list-style: square;
-  margin-left: 2rem;
-}
-.about .article-container article .content-wrapper div ul li {
+.about .article-container article .content-wrapper div li {
   color: #5f5f5f;
   font-family: gilroy-thin;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.about .article-container article .content-wrapper div li #list-checkbox {
+  width: 1.2rem;
 }
 .about .article-container article:nth-child(2) {
   flex-direction: row-reverse;
@@ -528,6 +532,18 @@ dialog form .modal-second-button {
   background-color: transparent;
 }
 dialog form .modal-second-button:hover {
+  color: #3c6a8a;
+}
+dialog #modal-close {
+  width: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+dialog #modal-close:hover {
+  width: 2.3rem;
   color: #3c6a8a;
 }
 

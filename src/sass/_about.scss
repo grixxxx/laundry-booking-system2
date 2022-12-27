@@ -71,14 +71,18 @@
             margin-bottom: 1rem;
           }
 
-          ul {
-            list-style: square;
-            margin-left: 2rem;
+          margin-left: 2rem;
 
-            li {
-              color: $tertiaryClr;
-              font-family: $font300;
-              margin-bottom: 1rem;
+          li {
+            color: $tertiaryClr;
+            font-family: $font300;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            #list-checkbox {
+              width: 1.2rem;
             }
           }
         }

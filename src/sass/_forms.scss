@@ -39,4 +39,18 @@ dialog {
       }
     }
   }
+
+  #modal-close {
+    width: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+
+    &:hover {
+      width: 2.3rem;
+      color: $hoverClr;
+    }
+  }
 }

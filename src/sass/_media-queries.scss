@@ -70,9 +70,10 @@
 @media (width < 47.875rem) {
   .about > div.article-container {
     margin-block: 0;
+    border: 1px solid $tertiaryClr;
   }
   .content-wrapper {
-    padding-block: 5rem;
+    padding-block: 3em;
   }
   article#about-card {
     flex-direction: column-reverse;
@@ -84,5 +85,3 @@
     transform: none;
   }
 }
-
-

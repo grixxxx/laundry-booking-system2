@@ -58,3 +58,14 @@ const signupButton = document
   .addEventListener("click", () => {
     signupModal.showModal();
   });
+
+const modalCloseButton = document.querySelectorAll("#modal-close");
+
+modalCloseButton.forEach((close) => {
+  close.addEventListener("click", () => {
+    const modal = document.querySelectorAll(".modal");
+    modal.forEach((modal) => {
+      modal.close();
+    });
+  });
+});
