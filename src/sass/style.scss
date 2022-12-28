@@ -5,6 +5,7 @@
 @forward "./footer";
 @forward "./buttons";
 @forward "./forms";
+@forward "./dashboard";
 @use "./font" as *;
 @use "./colors" as *;
 
@@ -14,7 +15,7 @@ body {
   font-family: $font400;
 }
 
-main {
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

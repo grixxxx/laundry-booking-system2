@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: gilroy-semiBold;
+  src: url(/src/assets/fonts/Gilroy-SemiBold.ttf);
+}
+
+@font-face {
   font-family: gilroy-medium;
   src: url(/src/assets/fonts/Gilroy-Medium.ttf);
 }
@@ -25,6 +30,7 @@
 
 $fontHeavy: gilroy-heavy;
 $font900: gilroy-bold;
+$font700: gilroy-semiBold;
 $font500: gilroy-medium;
 $font400: gilroy-regular;
 $font300: gilroy-thin;

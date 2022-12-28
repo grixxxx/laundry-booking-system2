@@ -1,7 +1,8 @@
+@forward "./card";
 @use "./colors" as *;
 @use "./font" as *;
 
-header {
+.main-header {
   padding-block: 1.5em;
   position: fixed;
   width: min(90%, 77em);
@@ -96,4 +97,21 @@ header {
 }
 .ham8.active .bottom {
   stroke-dashoffset: -64px;
+}
+
+.dashboard-header {
+  background-color: $accentClr;
+  color: $primaryClr;
+  padding-block: 2em;
+  border-bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+
+  h1 {
+    color: $buttonClr;
+  }
+
+  h2 {
+    font-family: $font900;
+    font-size: 1.875rem;
+  }
 }

@@ -1,0 +1,127 @@
+@use "./font" as *;
+@use "./colors" as *;
+
+$gap: 1.875rem;
+$borderRadius: 0.625rem;
+
+@mixin completeTag() {
+  background-color: $completeBgClr;
+  color: $completeClr;
+}
+
+@mixin pendingTag() {
+  background-color: $pendingBgClr;
+  color: $pendingClr;
+}
+
+@mixin status-tag() {
+  border-radius: $borderRadius;
+  width: max-content;
+  margin-inline: auto;
+  padding: 0.2rem 1rem;
+}
+
+@mixin dashboardCard() {
+  background-color: $primaryClr;
+  width: max-content;
+  padding: 2em;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 0px rgba(7, 6, 41, 0.16);
+}
+@mixin dashboardSectionTitle {
+  font-size: 2.1875rem;
+  color: $tertiaryClr;
+  padding-bottom: 1em;
+}
+
+.order-card-container {
+  display: flex;
+  gap: $gap;
+
+  .order-card {
+    padding: 1rem 2rem;
+    box-shadow: 5px 5px 0px rgba(7, 6, 41, 0.16);
+    border-radius: 1rem;
+    text-align: center;
+    background-color: $primaryClr;
+  }
+
+  .order-card-count {
+    font-family: $font700;
+    font-size: $gap;
+    display: block;
+    margin-top: 0.5em;
+  }
+}
+
+.recent-order-section {
+  @include dashboardCard();
+
+  h1 {
+    @include dashboardSectionTitle();
+  }
+
+  table {
+    text-align: center;
+
+    th {
+      font-family: $font700;
+    }
+
+    tr {
+      height: 60px;
+    }
+
+    td {
+      width: 150px;
+    }
+
+    .table-date {
+      color: $tertiaryClr;
+    }
+    .table-status {
+      font-family: $font900;
+      font-size: 0.7rem;
+    }
+
+    .table-status--complete {
+      @include completeTag();
+      @include status-tag();
+    }
+
+    .table-status--pending {
+      @include pendingTag();
+      @include status-tag();
+    }
+  }
+}
+
+.pricing-section > h1 {
+ @include dashboardSectionTitle();
+
+  span {
+    font-size: 0.75rem;
+  }
+}
+
+.pricing-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+
+  &:not(&:nth-child(7)) {
+    margin-bottom: 1.7rem;
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1.25rem;
+  }
+}
+
+.dashboard--card {
+  @include dashboardCard();
+}

@@ -7,6 +7,10 @@
   src: url(/src/assets/fonts/Gilroy-Bold.ttf);
 }
 @font-face {
+  font-family: gilroy-semiBold;
+  src: url(/src/assets/fonts/Gilroy-SemiBold.ttf);
+}
+@font-face {
   font-family: gilroy-medium;
   src: url(/src/assets/fonts/Gilroy-Medium.ttf);
 }
@@ -237,7 +241,106 @@ table {
     transform: none;
   }
 }
-header {
+.order-card-container {
+  display: flex;
+  gap: 1.875rem;
+}
+.order-card-container .order-card {
+  padding: 1rem 2rem;
+  box-shadow: 5px 5px 0px rgba(7, 6, 41, 0.16);
+  border-radius: 1rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+.order-card-container .order-card-count {
+  font-family: gilroy-semiBold;
+  font-size: 1.875rem;
+  display: block;
+  margin-top: 0.5em;
+}
+
+.recent-order-section {
+  background-color: #ffffff;
+  width: max-content;
+  padding: 2em;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 0px rgba(7, 6, 41, 0.16);
+}
+.recent-order-section h1 {
+  font-size: 2.1875rem;
+  color: #5f5f5f;
+  padding-bottom: 1em;
+}
+.recent-order-section table {
+  text-align: center;
+}
+.recent-order-section table th {
+  font-family: gilroy-semiBold;
+}
+.recent-order-section table tr {
+  height: 60px;
+}
+.recent-order-section table td {
+  width: 150px;
+}
+.recent-order-section table .table-date {
+  color: #5f5f5f;
+}
+.recent-order-section table .table-status {
+  font-family: gilroy-bold;
+  font-size: 0.7rem;
+}
+.recent-order-section table .table-status--complete {
+  background-color: #d1ebe8;
+  color: #1b998b;
+  border-radius: 0.625rem;
+  width: max-content;
+  margin-inline: auto;
+  padding: 0.2rem 1rem;
+}
+.recent-order-section table .table-status--pending {
+  background-color: #f9f2d4;
+  color: #e1bc29;
+  border-radius: 0.625rem;
+  width: max-content;
+  margin-inline: auto;
+  padding: 0.2rem 1rem;
+}
+
+.pricing-section > h1 {
+  font-size: 2.1875rem;
+  color: #5f5f5f;
+  padding-bottom: 1em;
+}
+.pricing-section > h1 span {
+  font-size: 0.75rem;
+}
+
+.pricing-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+.pricing-card:not(.pricing-card:nth-child(7)) {
+  margin-bottom: 1.7rem;
+}
+.pricing-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.25rem;
+}
+
+.dashboard--card {
+  background-color: #ffffff;
+  width: max-content;
+  padding: 2em;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 0px rgba(7, 6, 41, 0.16);
+}
+
+.main-header {
   padding-block: 1.5em;
   position: fixed;
   width: min(90%, 77em);
@@ -251,27 +354,27 @@ header {
   font-family: gilroy-bold;
   box-shadow: 0px 5px 45px -10px #000000;
 }
-header nav {
+.main-header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-inline: min(7%, 12.5rem);
 }
-header nav ul {
+.main-header nav ul {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-header nav ul a {
+.main-header nav ul a {
   text-decoration: none;
   color: #6096ba;
   text-transform: uppercase;
   cursor: pointer;
 }
-header nav ul a:hover {
+.main-header nav ul a:hover {
   color: #ffffff;
 }
-header nav img {
+.main-header nav img {
   object-fit: contain;
   max-width: 15rem;
   z-index: 1;
@@ -333,6 +436,21 @@ header nav img {
 
 .ham8.active .bottom {
   stroke-dashoffset: -64px;
+}
+
+.dashboard-header {
+  background-color: #274c77;
+  color: #ffffff;
+  padding-block: 2em;
+  border-bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+}
+.dashboard-header h1 {
+  color: #6096ba;
+}
+.dashboard-header h2 {
+  font-family: gilroy-bold;
+  font-size: 1.875rem;
 }
 
 .about {
@@ -547,13 +665,24 @@ dialog #modal-close:hover {
   color: #3c6a8a;
 }
 
+.dashboard-main-section,
+.dashboard-header {
+  padding-inline: min(10%, 12.5rem);
+}
+
+.dashboard-wrapper {
+  display: flex;
+  gap: 1.875rem;
+  margin-top: 1.875rem;
+}
+
 body {
   background-color: #ffffff;
   color: #282524;
   font-family: gilroy-regular;
 }
 
-main {
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,7 +695,7 @@ main {
   height: 100vh;
   position: relative;
 }
-main div {
+.main div {
   text-align: center;
   -webkit-transform: translateY(-10rem);
   -ms-transform: translateY(-10rem);
@@ -577,30 +706,30 @@ main div {
   position: relative;
   line-height: 1.5;
 }
-main div h1 {
+.main div h1 {
   font-family: gilroy-heavy;
   font-size: clamp(1.8rem, -1.0666rem + 8.7013vw, 6.25rem);
   text-transform: capitalize;
 }
-main div p {
+.main div p {
   color: #5f5f5f;
   font-size: clamp(1rem, 0.6299rem + 1.5584vw, 2.5rem);
   max-width: 40ch;
   margin-inline: auto;
 }
-main div .star {
+.main div .star {
   width: 60px;
   position: absolute;
 }
-main div .star-one {
+.main div .star-one {
   top: -1rem;
   left: -5rem;
 }
-main div .star-two {
+.main div .star-two {
   bottom: -1rem;
   right: -5rem;
 }
-main img {
+.main img {
   position: absolute;
   bottom: 0;
   max-width: 70rem;

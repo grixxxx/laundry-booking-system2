@@ -157,7 +157,7 @@ table {
   }
 }
 
-header {
+.main-header {
   width: min(90%, 77em);
   z-index: 1;
   background-color: #274c77;
@@ -172,31 +172,31 @@ header {
   box-shadow: 0 5px 45px -10px #000;
 }
 
-header nav {
+.main-header nav {
   justify-content: space-between;
   align-items: center;
   padding-inline: min(7%, 12.5rem);
   display: flex;
 }
 
-header nav ul {
+.main-header nav ul {
   align-items: center;
   gap: 1.5rem;
   display: flex;
 }
 
-header nav ul a {
+.main-header nav ul a {
   color: #6096ba;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
 }
 
-header nav ul a:hover {
+.main-header nav ul a:hover {
   color: #fff;
 }
 
-header nav img {
+.main-header nav img {
   -o-object-fit: contain;
   object-fit: contain;
   max-width: 15rem;
@@ -257,6 +257,12 @@ header nav img {
 
 .ham8.active .bottom {
   stroke-dashoffset: -64px;
+}
+
+.dashboard-header {
+  width: 100%;
+  color: #fff;
+  background-color: #274c77;
 }
 
 .about {
