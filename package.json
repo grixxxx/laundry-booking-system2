@@ -17,5 +17,8 @@
     "parcel": "^2.8.2",
     "postcss": "^8.4.20",
     "postcss-cli": "^10.1.0"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^0.2.28"
   }
 }
