@@ -20,6 +20,7 @@
     <meta name="author" content="Delmer John Ballesteros" />
     <title>Laundry Booking System</title>
     <link rel="stylesheet" href="/public/style.css" />
+
     <script type="module" src="./js/lenis.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
   </head>
@@ -141,12 +142,13 @@
         <img class="star star-one" src="./assets/stars.png" alt="stars" />
         <h1>laundry booking system</h1>
         <p>
-          Hassle free and affordable dry cleaning and laundry delivered to your
-          home.
+          <span class="circle">Hassle free</span> and
+          <span class="underline">affordable</span> dry cleaning and laundry
+          delivered to your home.
         </p>
         <img class="star star-two" src="./assets/stars.png" alt="stars" />
       </div>
-      <img src="./assets/basket.png" alt="basket of clothes" />
+      <img src="./assets/basket.png" alt="basket of clothes" loading="lazy" />
     </main>
 
     <!-- NOTE: ABOUT -->
@@ -294,32 +296,32 @@
 
       <div class="pricing-container">
         <article>
-          <img src="./assets/tshirt.png" alt="Shirt" />
+          <img src="./assets/tshirt.png" alt="Shirt" loading="lazy" />
           <h2>Shirt</h2>
           <p>₱10.<span>00</span></p>
         </article>
         <article>
-          <img src="./assets/hooded-jacket.png" alt="jacket" />
+          <img src="./assets/hooded-jacket.png" alt="jacket" loading="lazy" />
           <h2>Jacket</h2>
           <p>₱60.<span>00</span></p>
         </article>
         <article>
-          <img src="./assets/football-shorts.png" alt="Short" />
+          <img src="./assets/football-shorts.png" alt="Short" loading="lazy" />
           <h2>Short</h2>
           <p>₱20.<span>00</span></p>
         </article>
         <article>
-          <img src="./assets/underwear.png" alt="underwear" />
+          <img src="./assets/underwear.png" alt="underwear" loading="lazy" />
           <h2>Underwear</h2>
           <p>₱5.<span>00</span></p>
         </article>
         <article>
-          <img src="./assets/trousers.png" alt="Pants" />
+          <img src="./assets/trousers.png" alt="Pants" loading="lazy" />
           <h2>Pants</h2>
           <p>₱4.<span>00</span></p>
         </article>
         <article>
-          <img src="./assets/bed-sheets.png" alt="Blanket" />
+          <img src="./assets/bed-sheets.png" alt="Blanket" loading="lazy" />
           <h2>Blanket</h2>
           <p>₱100.<span>00</span></p>
         </article>
@@ -330,7 +332,9 @@
 
     <section class="contact">
       <div class="logo">
-        <a href="#"><img src="/src/assets/laundryLogo.png" alt="logo" /></a>
+        <a href="#"
+          ><img src="/src/assets/laundryLogo.png" alt="logo" loading="lazy"
+        /></a>
       </div>
 
       <article>
@@ -359,5 +363,9 @@
     <footer><p>© 2022 Laundry Booking System. All Rights Reserved.</p></footer>
 
     <script src="./js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/rough-notation?module"
+    ></script>
   </body>
 </html>
