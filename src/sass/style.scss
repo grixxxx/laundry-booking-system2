@@ -30,9 +30,9 @@ body {
 
   div {
     text-align: center;
-    -webkit-transform: translateY(-10rem);
-    -ms-transform: translateY(-10rem);
-    transform: translateY(-10rem);
+    -webkit-transform: translateY(-5rem);
+    -ms-transform: translateY(-5rem);
+    transform: translateY(-5rem);
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -67,10 +67,10 @@ body {
     }
   }
 
-  img {
+  .basket {
     position: absolute;
     bottom: 0;
-    max-width: 70rem;
+    max-width: 50rem;
     width: 100%;
   }
 }

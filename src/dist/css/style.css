@@ -180,9 +180,8 @@ table {
   }
   .signup-bottom {
     margin-inline: auto;
-    border-radius: 10px;
     grid-template-columns: 2fr 1fr;
-    max-width: 76.25rem;
+    max-width: 60rem;
   }
   .signup-bottom .banner-signup-button {
     width: max-content;
@@ -697,9 +696,9 @@ body {
 }
 .main div {
   text-align: center;
-  -webkit-transform: translateY(-10rem);
-  -ms-transform: translateY(-10rem);
-  transform: translateY(-10rem);
+  -webkit-transform: translateY(-5rem);
+  -ms-transform: translateY(-5rem);
+  transform: translateY(-5rem);
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -729,10 +728,10 @@ body {
   bottom: -1rem;
   right: -5rem;
 }
-.main img {
+.main .basket {
   position: absolute;
   bottom: 0;
-  max-width: 70rem;
+  max-width: 50rem;
   width: 100%;
 }
 

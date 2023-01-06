@@ -6,8 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "build:postcss": "postcss src/dist/css/style.css -o public/style.css",
-    "watch:css": "postcss src/dist/css/style.css -o public/style.css -w"
+    "sass:watch": "sass --watch src/sass:src/dist/css"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +18,7 @@
     "postcss-cli": "^10.1.0"
   },
   "dependencies": {
-    "@studio-freight/lenis": "^0.2.28"
+    "@studio-freight/lenis": "^0.2.28",
+    "rough-notation": "^0.5.1"
   }
 }

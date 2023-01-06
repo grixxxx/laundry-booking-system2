@@ -9,7 +9,9 @@
     <link rel="shortcut icon" href="/logoIcon.bcf0d95e.png" type="image/x-icon">
     <meta name="author" content="Delmer John Ballesteros">
     <title>Laundry Booking System</title>
-    <link rel="stylesheet" href="/index.83d9161e.css">
+    <link rel="stylesheet" href="/index.98f508ad.css">
+    <script src="/index.13701dd4.js" defer=""></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
   </head>
   <body oncontextmenu="return true">
     <header class="main-header">
@@ -49,10 +51,10 @@
 
       <h1>LOGIN</h1>
       <p>
-        Welcome Back! to stay connected with us login with your personal
+        Welcome back! to stay connected with us login with your personal
         information.
       </p>
-      <form action="#">
+      <form action="dashboard.html">
         <input type="email" placeholder="Email" required="">
         <input type="password" placeholder="Password" required="">
         <button type="submit" class="modal-login-button">LOGIN</button>
@@ -82,24 +84,25 @@
         <input type="password" placeholder="Password" required="">
         <button type="submit" class="modal-login-button">SIGNUP</button>
         <button class="modal-second-button">
-          ALREADY REGISTERED? CLICK HERE
+          Already registered? click here
         </button>
       </form>
     </dialog>
 
     <!-- NOTE: MAIN -->
 
-    <main>
+    <main class="main">
       <div class="main-title-container">
         <img class="star star-one" src="/stars.0bccd6c6.png" alt="stars">
         <h1>laundry booking system</h1>
         <p>
-          Hassle free and affordable dry cleaning and laundry delivered to your
-          home.
+          <span class="circle">Hassle free</span> and
+          <span class="underline">affordable</span> dry cleaning and laundry
+          delivered to your home.
         </p>
         <img class="star star-two" src="/stars.0bccd6c6.png" alt="stars">
       </div>
-      <img src="/basket.90e5802b.png" alt="basket of clothes">
+      <img class="basket" src="/basket.90e5802b.png" alt="basket of clothes" loading="lazy">
     </main>
 
     <!-- NOTE: ABOUT -->
@@ -210,32 +213,32 @@
 
       <div class="pricing-container">
         <article>
-          <img src="/tshirt.26bd9dad.png" alt="Shirt">
+          <img src="/tshirt.26bd9dad.png" alt="Shirt" loading="lazy">
           <h2>Shirt</h2>
           <p>₱10.<span>00</span></p>
         </article>
         <article>
-          <img src="/hooded-jacket.b966edce.png" alt="jacket">
+          <img src="/hooded-jacket.b966edce.png" alt="jacket" loading="lazy">
           <h2>Jacket</h2>
           <p>₱60.<span>00</span></p>
         </article>
         <article>
-          <img src="/football-shorts.2f9df6f4.png" alt="Short">
+          <img src="/football-shorts.2f9df6f4.png" alt="Short" loading="lazy">
           <h2>Short</h2>
           <p>₱20.<span>00</span></p>
         </article>
         <article>
-          <img src="/underwear.2b2a2fdc.png" alt="underwear">
+          <img src="/underwear.2b2a2fdc.png" alt="underwear" loading="lazy">
           <h2>Underwear</h2>
           <p>₱5.<span>00</span></p>
         </article>
         <article>
-          <img src="/trousers.66231d18.png" alt="Pants">
+          <img src="/trousers.66231d18.png" alt="Pants" loading="lazy">
           <h2>Pants</h2>
           <p>₱4.<span>00</span></p>
         </article>
         <article>
-          <img src="/bed-sheets.c2cb9a98.png" alt="Blanket">
+          <img src="/bed-sheets.c2cb9a98.png" alt="Blanket" loading="lazy">
           <h2>Blanket</h2>
           <p>₱100.<span>00</span></p>
         </article>
@@ -246,7 +249,7 @@
 
     <section class="contact">
       <div class="logo">
-        <a href="#"><img src="/laundryLogo.89e90bb0.png" alt="logo"></a>
+        <a href="#"><img src="/laundryLogo.89e90bb0.png" alt="logo" loading="lazy"></a>
       </div>
 
       <article>
@@ -275,5 +278,5 @@
     <footer><p>© 2022 Laundry Booking System. All Rights Reserved.</p></footer>
 
     <script src="/index.09c24910.js"></script>
-  <script src="/LaundryBookingSystem.59712999.js"></script></body>
+  </body>
 </html>
