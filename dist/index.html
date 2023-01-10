@@ -44,7 +44,7 @@
 
     <!-- NOTE: LOGIN FORM -->
 
-    <dialog class="login-modal modal">
+    <dialog class="login-modal modal" id="login-modal">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" id="modal-close">
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
@@ -54,11 +54,11 @@
         Welcome back! to stay connected with us login with your personal
         information.
       </p>
-      <form action="dashboard.html">
+      <form action="./Dashboard/">
         <input type="email" placeholder="Email" required="">
         <input type="password" placeholder="Password" required="">
         <button type="submit" class="modal-login-button">LOGIN</button>
-        <button class="modal-second-button">
+        <button class="modal-second-button signup-button">
           Don't have an account? Sign up for free
         </button>
       </form>
@@ -83,7 +83,7 @@
         <input type="email" placeholder="Email" required="">
         <input type="password" placeholder="Password" required="">
         <button type="submit" class="modal-login-button">SIGNUP</button>
-        <button class="modal-second-button">
+        <button class="modal-second-button login-button-from-signup-page">
           Already registered? click here
         </button>
       </form>
@@ -198,8 +198,7 @@
       </div>
 
       <div class="bottom-button-container">
-        <a href="/dashboard.html">
-          <button class="banner-signup-button">GET STARTED</button></a>
+        <button class="banner-signup-button signup-button">GET STARTED</button>
       </div>
     </section>
 

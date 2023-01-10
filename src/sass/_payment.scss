@@ -1,0 +1,89 @@
+@use "./font" as *;
+
+.payment-main {
+  padding: 5rem;
+  display: flex;
+  gap: 1.875rem;
+
+  .schedule-section {
+    flex: 1;
+    box-shadow: 0px 13px 30px rgba(7, 6, 41, 0.16);
+    padding: 3rem;
+
+    h1 {
+      font-size: 2.1875rem;
+      font-family: $font900;
+      margin-bottom: 1.5em;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+
+      input {
+        border: 1px solid #121212;
+        border-radius: 10px;
+      }
+
+      div {
+        display: flex;
+        gap: 1rem;
+
+        & > * {
+          flex: 1;
+        }
+      }
+
+      textarea {
+        resize: none;
+        @extend input;
+        font-family: $font400;
+        padding: 1em;
+      }
+    }
+  }
+}
+
+.customize-section {
+  box-shadow: 0px 13px 30px rgba(7, 6, 41, 0.16);
+  flex: 1.5;
+  padding: 3rem;
+
+  & > *:not(h1) {
+    margin-bottom: 4rem;
+  }
+
+  h1 {
+    font-size: 2.1875rem;
+    font-family: $font900;
+    margin-bottom: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-family: $font700;
+    margin-bottom: 1rem;
+  }
+
+  .garment-count-wrapper {
+    display: flex;
+
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  article {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    border: 1px solid #777777;
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  input[type="checkbox"]:not(:nth-child(1)) {
+    margin-left: 3rem;
+  }
+}

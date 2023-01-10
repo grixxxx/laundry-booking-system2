@@ -20,15 +20,22 @@ hamburgerMenu.addEventListener("click", ()=>{
     });
 });
 const loginModal = document.querySelector(".login-modal");
+const signupModal = document.querySelector(".signup-modal");
+const signupButton = document.querySelectorAll(".signup-button ");
 setInterval(()=>{
     loginModal.hasAttribute("open") ? document.body.style.overflow = "hidden" : document.body.style.overflow = "visible";
 }, 500);
 const loginButton = document.querySelector(".login-button").addEventListener("click", ()=>{
     loginModal.showModal();
 });
-const signupModal = document.querySelector(".signup-modal");
-const signupButton = document.querySelector(".signup-button ").addEventListener("click", ()=>{
-    signupModal.showModal();
+const altLoginButton = document.querySelector(".login-button-from-signup-page").addEventListener("click", ()=>{
+    signupModal.close();
+    loginModal.showModal();
+});
+signupButton.forEach((signup)=>{
+    signup.addEventListener("click", ()=>{
+        signupModal.showModal();
+    });
 });
 const modalCloseButton = document.querySelectorAll("#modal-close");
 modalCloseButton.forEach((close)=>{

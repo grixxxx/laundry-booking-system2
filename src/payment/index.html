@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/css/style.css" />
+    <title>Payment | Laundry Booking System</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/logoIcon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main class="payment-main">
+      <section class="schedule-section">
+        <h1>SCHEDULE A PICKUP</h1>
+
+        <form action="#">
+          <div>
+            <input type="date" value="2023-01-11" required id="dateControl" />
+            <input
+              type="time"
+              min="09:00"
+              max="18:00"
+              required
+              id="timeControl"
+            />
+          </div>
+          <div>
+            <input type="text" name="firstname" placeholder="First Name" />
+            <input type="text" name="lastname" placeholder="Last Name" />
+          </div>
+          <input type="text" name="phonenumber" placeholder="Phone Number" />
+          <input
+            type="text"
+            name="streetaddress"
+            placeholder="Street Address"
+          />
+
+          <input
+            type="text"
+            name="housenumber"
+            placeholder="Unit/Apt # (Please enter n/a if not applicable) *"
+          />
+          <div>
+            <input type="text" name="city" placeholder="City" />
+            <input type="text" name="state" placeholder="State" />
+          </div>
+
+          <input type="text" name="zip" placeholder="Zip Code" />
+
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Tips for pick up or delivery (community name, access information, address tips, etc)
+"
+          ></textarea>
+        </form>
+      </section>
+
+      <section class="customize-section">
+        <h1>CUSTOMIZE YOUR SERVICE</h1>
+
+        <section>
+          <h2>Order Details:</h2>
+
+          <div class="garment-count-wrapper">
+            <article>
+              <img src="../assets/tshirt.svg" alt="Shirt" />
+              <input type="number" required value="0" />
+            </article>
+            <article>
+              <img src="../assets/football-shorts.svg" alt="Short" />
+              <input type="number" required value="0" />
+            </article>
+            <article>
+              <img src="../assets/trousers.svg" alt="Trousers" />
+              <input type="number" required value="0" />
+            </article>
+            <article>
+              <img src="../assets/bed-sheets.svg" alt="Bed Sheet" />
+              <input type="number" required value="0" />
+            </article>
+            <article>
+              <img src="../assets/hooded-jacket.svg" alt="Jacket" />
+              <input type="number" required value="0" />
+            </article>
+            <article>
+              <img src="../assets/underwear.svg" alt="Underwear" />
+              <input type="number" required value="0" />
+            </article>
+          </div>
+        </section>
+        <section class="service-section">
+          <h2>Service:</h2>
+          <div>
+            <input type="checkbox" name="wash" />Wash only
+            <input type="checkbox" name="washandfold" />Wash & Fold
+            <input type="checkbox" name="drycleaning" />Dry Cleaning
+          </div>
+        </section>
+        <section class="detergent-section">
+          <h2>Detergent:</h2>
+          <div>
+            <input type="checkbox" name="tideoriginal" id="" />Tide Original
+            <input type="checkbox" name="Hypoallergenic" />Hypoallergenic
+          </div>
+        </section>
+        <section class="bleach-section">
+          <h2>Bleach:</h2>
+          <div>
+            <input type="checkbox" name="clorox" id="" />Clorox
+            <input type="checkbox" name="nobleach" />No Bleach
+          </div>
+        </section>
+        <section class="deliver-option-section">
+          <h2>Please choose would you like your laundry get returned:</h2>
+          <div>
+            <input type="checkbox" name="twoday" id="" />2-Day Standard (FREE)
+            <input type="checkbox" name="oneday" />1-Day Process (Add 200 pesos)
+          </div>
+        </section>
+        <div class="customize-section--button-container">
+          <a href="../Dashboard/">
+            <button class="BackDashboardButton">BACK TO DASHBOARD</button></a
+          >
+          <button class="proceedtopaymentBtn">PROCEED TO PAYMENT</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/payment.js"></script>
+  </body>
+</html>

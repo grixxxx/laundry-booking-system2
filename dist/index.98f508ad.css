@@ -166,40 +166,51 @@ table {
 }
 
 .order-card-container .order-card {
-  text-align: center;
   background-color: #fff;
   border-radius: 1rem;
-  padding: 1rem 2rem;
-  box-shadow: 5px 5px #07062929;
+  flex: 1;
+  padding: 2rem;
+  box-shadow: 0 13px 30px #07062929;
+}
+
+.order-card-container .order-card-title {
+  align-items: center;
+  gap: 10px;
+  display: flex;
 }
 
 .order-card-container .order-card-count {
-  margin-top: .5em;
+  margin-bottom: 1rem;
   font-family: gilroy-semiBold;
-  font-size: 1.875rem;
+  font-size: 3.125rem;
   display: block;
 }
 
 .recent-order-section {
-  width: max-content;
   background-color: #fff;
   border-radius: 1rem;
-  padding: 2em;
-  box-shadow: 5px 5px #07062929;
+  padding: 3rem;
+  box-shadow: 0 13px 30px #07062929;
+}
+
+.recent-order-section .order-status-container {
+  gap: 20px;
+  display: flex;
 }
 
 .recent-order-section h1 {
-  color: #5f5f5f;
-  padding-bottom: 1em;
+  font-family: gilroy-bold;
   font-size: 2.1875rem;
 }
 
 .recent-order-section table {
   text-align: center;
+  margin-top: 30px;
 }
 
 .recent-order-section table th {
   font-family: gilroy-semiBold;
+  font-size: 1.25rem;
 }
 
 .recent-order-section table tr {
@@ -207,7 +218,7 @@ table {
 }
 
 .recent-order-section table td {
-  width: 150px;
+  width: 250px;
 }
 
 .recent-order-section table .table-date {
@@ -238,12 +249,16 @@ table {
 }
 
 .pricing-section > h1 {
-  color: #5f5f5f;
-  padding-bottom: 1em;
+  font-family: gilroy-bold;
   font-size: 2.1875rem;
 }
 
-.pricing-section > h1 span {
+h1.pricing-section-title--margin {
+  margin-bottom: 30px;
+}
+
+h1.pricing-section-title--margin span {
+  font-family: gilroy-regular;
   font-size: .75rem;
 }
 
@@ -255,22 +270,21 @@ table {
 }
 
 .pricing-card:not(.pricing-card:nth-child(7)) {
-  margin-bottom: 1.7rem;
+  margin-bottom: 3rem;
 }
 
 .pricing-card h2 {
   align-items: center;
   gap: .5em;
-  font-size: 1.25rem;
+  font-size: 2rem;
   display: flex;
 }
 
 .dashboard--card {
-  width: max-content;
   background-color: #fff;
   border-radius: 1rem;
-  padding: 2em;
-  box-shadow: 5px 5px #07062929;
+  padding: 3rem;
+  box-shadow: 0 13px 30px #07062929;
 }
 
 .main-header {
@@ -376,19 +390,24 @@ table {
 
 .dashboard-header {
   color: #fff;
+  width: 70%;
   background-color: #274c77;
-  border-bottom-right-radius: 3em;
-  border-bottom-left-radius: 3em;
-  padding-block: 2em;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 2rem 6rem;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.dashboard-header h1 {
-  color: #6096ba;
+.dashboard-header img {
+  width: 15rem;
 }
 
-.dashboard-header h2 {
-  font-family: gilroy-bold;
-  font-size: 1.875rem;
+.dashboard-header nav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 .about {
@@ -552,8 +571,11 @@ button {
   color: #fff;
   background-color: #6096ba;
   border-radius: 5px;
+  justify-content: center;
+  align-items: center;
   padding: .5rem 1.5rem;
   font-family: gilroy-bold;
+  display: flex;
 }
 
 button:hover {
@@ -561,7 +583,7 @@ button:hover {
   border-color: #0000;
 }
 
-.login-button {
+.login-button, .logout-button {
   background-color: #0000;
   border: 1px solid #fff;
 }
@@ -578,6 +600,48 @@ button:hover {
   width: 100%;
   border: none;
   padding: 1rem 2rem;
+}
+
+.dashboard-button-wrapper {
+  gap: 20px;
+  display: flex;
+}
+
+.dashboard-button-wrapper a {
+  text-decoration: none;
+}
+
+.dashboard-button-wrapper .contact-support-button {
+  color: #000;
+  background-color: #0000;
+  border: 1px solid #000;
+}
+
+.dashboard-button-wrapper .contact-support-button:hover {
+  background-color: #6096ba;
+  border-color: #0000;
+}
+
+input[type="number"] {
+  width: 3rem;
+  height: 0;
+  font-size: 1rem;
+}
+
+.customize-section--button-container {
+  justify-content: end;
+  gap: 1.5rem;
+  display: flex;
+  margin-bottom: 0 !important;
+}
+
+.customize-section--button-container a {
+  text-decoration: none;
+}
+
+.customize-section--button-container a .BackDashboardButton {
+  color: #121212;
+  background-color: #0000;
 }
 
 dialog {
@@ -636,14 +700,131 @@ dialog #modal-close:hover {
   color: #3c6a8a;
 }
 
-.dashboard-main-section, .dashboard-header {
+.payment-main {
+  gap: 1.875rem;
+  padding: 5rem;
+  display: flex;
+}
+
+.payment-main .schedule-section {
+  flex: 1;
+  padding: 3rem;
+  box-shadow: 0 13px 30px #07062929;
+}
+
+.payment-main .schedule-section h1 {
+  margin-bottom: 1.5em;
+  font-family: gilroy-bold;
+  font-size: 2.1875rem;
+}
+
+.payment-main .schedule-section form {
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.payment-main .schedule-section form input, .payment-main .schedule-section form textarea {
+  border: 1px solid #121212;
+  border-radius: 10px;
+}
+
+.payment-main .schedule-section form div {
+  gap: 1rem;
+  display: flex;
+}
+
+.payment-main .schedule-section form div > * {
+  flex: 1;
+}
+
+.payment-main .schedule-section form textarea {
+  resize: none;
+  padding: 1em;
+  font-family: gilroy-regular;
+}
+
+.customize-section {
+  flex: 1.5;
+  padding: 3rem;
+  box-shadow: 0 13px 30px #07062929;
+}
+
+.customize-section > :not(h1) {
+  margin-bottom: 4rem;
+}
+
+.customize-section h1 {
+  margin-bottom: 1.5em;
+  font-family: gilroy-bold;
+  font-size: 2.1875rem;
+}
+
+.customize-section h2 {
+  margin-bottom: 1rem;
+  font-family: gilroy-semiBold;
+  font-size: 1.25rem;
+}
+
+.customize-section .garment-count-wrapper {
+  flex-wrap: wrap;
+  gap: 3rem;
+  display: flex;
+}
+
+.customize-section article {
+  border: 1px solid #777;
+  border-radius: 20px;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.customize-section input[type="checkbox"]:not(:nth-child(1)), .customize-section .payment-main .schedule-section form textarea[type="checkbox"]:not(:nth-child(1)), .payment-main .schedule-section form .customize-section textarea[type="checkbox"]:not(:nth-child(1)) {
+  margin-left: 3rem;
+}
+
+.dashboard-main-section {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
   padding-inline: min(10%, 12.5rem);
+  display: flex;
+}
+
+.dashboard-main-section .dashboard-title-container {
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1.875rem;
+  display: flex;
+}
+
+.dashboard-main-section .dashboard-title-container .dashboard-title {
+  font-family: gilroy-bold;
+  font-size: 2.1875rem;
+}
+
+.dashboard-main-section .dashboard-title-container .outputDate {
+  color: #777;
+  text-transform: uppercase;
 }
 
 .dashboard-wrapper {
+  width: 70%;
+  flex-direction: column;
   gap: 1.875rem;
-  margin-top: 1.875rem;
   display: flex;
+}
+
+.two-section-wrapper {
+  gap: 1.875rem;
+  display: flex;
+}
+
+div.swal-title {
+  font-family: gilroy-regular;
 }
 
 body {
