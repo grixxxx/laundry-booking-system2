@@ -23,15 +23,13 @@ $borderRadius: 0.625rem;
 
 @mixin dashboardCard() {
   background-color: $primaryClr;
-  width: max-content;
-  padding: 2em;
+  padding: 3rem;
   border-radius: 1rem;
-  box-shadow: 5px 5px 0px rgba(7, 6, 41, 0.16);
+  box-shadow: 0px 13px 30px rgba(7, 6, 41, 0.16);
 }
 @mixin dashboardSectionTitle {
   font-size: 2.1875rem;
-  color: $tertiaryClr;
-  padding-bottom: 1em;
+  font-family: $font900;
 }
 
 .order-card-container {
@@ -39,23 +37,33 @@ $borderRadius: 0.625rem;
   gap: $gap;
 
   .order-card {
-    padding: 1rem 2rem;
-    box-shadow: 5px 5px 0px rgba(7, 6, 41, 0.16);
+    padding: 2rem;
+    box-shadow: 0px 13px 30px rgba(7, 6, 41, 0.16);
     border-radius: 1rem;
-    text-align: center;
     background-color: $primaryClr;
+    flex: 1;
+  }
+  .order-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .order-card-count {
     font-family: $font700;
-    font-size: $gap;
+    font-size: 3.125rem;
     display: block;
-    margin-top: 0.5em;
+    margin-bottom: 1rem;
   }
 }
 
 .recent-order-section {
   @include dashboardCard();
+
+  .order-status-container {
+    display: flex;
+    gap: 20px;
+  }
 
   h1 {
     @include dashboardSectionTitle();
@@ -63,9 +71,11 @@ $borderRadius: 0.625rem;
 
   table {
     text-align: center;
+    margin-top: 30px;
 
     th {
       font-family: $font700;
+      font-size: 1.25rem;
     }
 
     tr {
@@ -73,7 +83,7 @@ $borderRadius: 0.625rem;
     }
 
     td {
-      width: 150px;
+      width: 250px;
     }
 
     .table-date {
@@ -97,10 +107,15 @@ $borderRadius: 0.625rem;
 }
 
 .pricing-section > h1 {
- @include dashboardSectionTitle();
+  @include dashboardSectionTitle();
+}
+
+h1.pricing-section-title--margin {
+  margin-bottom: 30px;
 
   span {
     font-size: 0.75rem;
+    font-family: $font400;
   }
 }
 
@@ -111,14 +126,14 @@ $borderRadius: 0.625rem;
   gap: 5rem;
 
   &:not(&:nth-child(7)) {
-    margin-bottom: 1.7rem;
+    margin-bottom: 3rem;
   }
 
   h2 {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }
 

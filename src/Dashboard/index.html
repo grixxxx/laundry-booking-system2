@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/css/style.css" />
+
+    <title>Dashboard | Laundry Booking System</title>
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <nav class="dashboard-nav">
+        <img src="../assets/laundryLogo.png" alt="business logo" />
+
+        <button class="logout-button">LOGOUT</button>
+      </nav>
+    </header>
+    <main class="dashboard-main-section">
+      <div class="dashboard-title-container">
+        <div>
+          <h1 class="dashboard-title">DASHBOARD</h1>
+          <p class="outputDate"><span class="timeSession"></span></p>
+        </div>
+
+        <div class="dashboard-button-wrapper">
+          <button>
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.54785 12.5H18.4526"
+                stroke="white"
+                stroke-width="1.19048"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.501 6.54785V18.4526"
+                stroke="white"
+                stroke-width="1.19048"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            NEW ORDER</button
+          ><button class="contact-support-button">
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.5 2.5C10.1569 2.5 11.5 3.84315 11.5 5.5V7.5C11.5 9.15685 10.1569 10.5 8.5 10.5C6.84315 10.5 5.5 9.15685 5.5 7.5V5.5C5.5 3.84315 6.84315 2.5 8.5 2.5ZM15.5 16.5V15.7718C15.5 12.5854 11.8137 10.5 8.5 10.5C5.18629 10.5 1.5 12.5854 1.5 15.7718V16.5C1.5 17.0523 1.94772 17.5 2.5 17.5H14.5C15.0523 17.5 15.5 17.0523 15.5 16.5Z"
+                stroke="#121212"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.5199 2.67773C13.6747 3.09515 14.5 4.20115 14.5 5.4999V6.4999C14.5 7.79698 13.6524 9.08125 12.5 9.4999C13.1743 8.58113 13.5109 7.4142 13.51 5.99909C13.509 4.58399 13.179 3.47687 12.5199 2.67773ZM17.5 17.4999H18.5C19.0523 17.4999 19.5 17.0522 19.5 16.4999C19.5 16.2572 19.5 16.0145 19.5 15.7717C19.5 13.6019 17.7906 11.9425 15.6534 11.1047C15.6534 11.1047 18.5 13.4999 17.5 17.4999Z"
+                fill="#121212"
+                stroke="#121212"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            CONTACT SUPPORT
+          </button>
+        </div>
+      </div>
+
+      <div class="two-section-wrapper">
+        <section class="dashboard-wrapper">
+          <section class="order-card-container">
+            <article class="order-card">
+              <span class="order-card-count">1</span>
+              <h1 class="order-card-title">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                    stroke="#E1BC29"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6 10L8 12L13 7"
+                    stroke="#E1BC29"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Pending Orders
+              </h1>
+            </article>
+            <article class="order-card">
+              <span class="order-card-count">04</span>
+              <h1 class="order-card-title">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.25 17C13.8063 17 17.5 13.4183 17.5 9C17.5 4.58172 13.8063 1 9.25 1C4.69365 1 1 4.58172 1 9C1 13.4183 4.69365 17 9.25 17Z"
+                    stroke="#1B998B"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.15625 6L12.3438 12"
+                    stroke="#1B998B"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.3438 6L6.15625 12"
+                    stroke="#1B998B"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Complete Orders
+              </h1>
+            </article>
+            <article class="order-card">
+              <span class="order-card-count">0</span>
+              <h1 class="order-card-title">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="9.5"
+                    y1="4.5"
+                    x2="9.5"
+                    y2="9.5"
+                    stroke="#E84855"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                    stroke="#E84855"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <line
+                    x1="9.5"
+                    y1="9.5"
+                    x2="5.5"
+                    y2="9.5"
+                    stroke="#E84855"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                Failed Orders
+              </h1>
+            </article>
+          </section>
+          <section class="recent-order-section dashboard--card">
+            <h1>RECENT ORDERS</h1>
+
+            <article class="order-status-container">
+              <p>
+                <svg
+                  width="14"
+                  height="11"
+                  viewBox="0 0 14 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.9146 5.5C12.9146 8.17321 10.2329 10.5 6.70732 10.5C3.18174 10.5 0.5 8.17321 0.5 5.5C0.5 2.82679 3.18174 0.5 6.70732 0.5C10.2329 0.5 12.9146 2.82679 12.9146 5.5Z"
+                    fill="white"
+                    stroke="#E1BC29"
+                  />
+                </svg>
+                Pending Order
+              </p>
+              <p>
+                <svg
+                  width="14"
+                  height="11"
+                  viewBox="0 0 14 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.3297 5.5C13.3297 8.17321 10.6479 10.5 7.12236 10.5C3.59678 10.5 0.915039 8.17321 0.915039 5.5C0.915039 2.82679 3.59678 0.5 7.12236 0.5C10.6479 0.5 13.3297 2.82679 13.3297 5.5Z"
+                    fill="white"
+                    stroke="#1B998B"
+                  />
+                </svg>
+                Complete Order
+              </p>
+              <p>
+                <svg
+                  width="15"
+                  height="11"
+                  viewBox="0 0 15 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.7447 5.5C13.7447 8.17321 11.063 10.5 7.5374 10.5C4.01182 10.5 1.33008 8.17321 1.33008 5.5C1.33008 2.82679 4.01182 0.5 7.5374 0.5C11.063 0.5 13.7447 2.82679 13.7447 5.5Z"
+                    fill="white"
+                    stroke="#E84855"
+                  />
+                </svg>
+                Failed Order
+              </p>
+            </article>
+
+            <table>
+              <tr>
+                <th>PICKUP DATE</th>
+                <th>DELIVERY DATE</th>
+                <th>PRICE</th>
+                <th>STATUS</th>
+                <th>PAYMENT</th>
+              </tr>
+              <tr>
+                <td class="table-date">11/25/2022</td>
+                <td class="table-date">11/26/2022</td>
+                <td>₱653.54</td>
+                <td class="table-status">
+                  <p class="table-status--pending">PENDING</p>
+                </td>
+                <td>COD</td>
+              </tr>
+              <tr>
+                <td class="table-date">09/21/2022</td>
+                <td class="table-date">09/23/2022</td>
+                <td>₱213.70</td>
+                <td class="table-status">
+                  <p class="table-status--complete">COMPLETED</p>
+                </td>
+                <td>COD</td>
+              </tr>
+              <tr>
+                <td class="table-date">09/07/2022</td>
+                <td class="table-date">09/08/2022</td>
+                <td>₱245.22</td>
+                <td class="table-status">
+                  <p class="table-status--complete">COMPLETED</p>
+                </td>
+                <td>DEBIT CARD</td>
+              </tr>
+              <tr>
+                <td class="table-date">02/14/2022</td>
+                <td class="table-date">02/15/2022</td>
+                <td>₱764.80</td>
+                <td class="table-status">
+                  <p class="table-status--complete">COMPLETED</p>
+                </td>
+                <td>COD</td>
+              </tr>
+            </table>
+          </section>
+        </section>
+        <div class="pricing-section dashboard--card">
+          <h1 class="pricing-section-title--margin">
+            PRICING <span>(per pcs)</span>
+          </h1>
+          <article class="pricing-card">
+            <h2><img src="../assets/tshirt.svg" alt="" /> Shirts</h2>
+            <p>₱10.00</p>
+          </article>
+          <article class="pricing-card">
+            <h2><img src="../assets/football-shorts.svg" alt="" /> Shorts</h2>
+            <p>₱20.00</p>
+          </article>
+          <article class="pricing-card">
+            <h2><img src="../assets/trousers.svg" alt="" /> Pants</h2>
+            <p>₱40.00</p>
+          </article>
+          <article class="pricing-card">
+            <h2><img src="../assets/hooded-jacket.svg" alt="" /> Jackets</h2>
+            <p>₱60.00</p>
+          </article>
+          <article class="pricing-card">
+            <h2><img src="../assets/underwear.svg" alt="" /> Underwears</h2>
+            <p>₱5.00</p>
+          </article>
+          <article class="pricing-card">
+            <h2><img src="../assets/bed-sheets.svg" alt="" /> Blankets</h2>
+            <p>₱100.00</p>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/dashboard.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </body>
+</html>

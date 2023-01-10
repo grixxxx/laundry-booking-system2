@@ -8,6 +8,9 @@ button {
   font-family: $font900;
   background-color: $buttonClr;
   color: $primaryClr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: $hoverClr;
@@ -32,4 +35,24 @@ button {
   width: 100%;
   border: none;
   padding: 1rem 2rem;
+}
+
+.logout-button {
+  @extend .login-button;
+}
+
+.dashboard-button-wrapper {
+  display: flex;
+  gap: 20px;
+
+  .contact-support-button {
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+
+    &:hover {
+      background-color: $buttonClr;
+      border-color: transparent;
+    }
+  }
 }

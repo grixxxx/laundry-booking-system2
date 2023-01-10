@@ -2,17 +2,21 @@
 @use "./colors" as *;
 @use "./font" as *;
 
-.main-header {
-  padding-block: 1.5em;
-  position: fixed;
-  width: min(90%, 77em);
-  z-index: 1;
-  transition: all 0.5s ease-in-out;
-  background-color: $accentClr;
-  left: 50%;
-  transform: translateX(-50%);
+@mixin header() {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $accentClr;
+}
+
+.main-header {
+  @include header();
+  width: min(90%, 77em);
+  padding-block: 1.5em;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
   font-family: $font900;
   box-shadow: 0px 5px 45px -10px #000000;
 
@@ -100,18 +104,18 @@
 }
 
 .dashboard-header {
-  background-color: $accentClr;
   color: $primaryClr;
-  padding-block: 2em;
-  border-bottom-left-radius: 3em;
-  border-bottom-right-radius: 3em;
+  padding: 2rem 6rem;
+  @include header();
+  width: 70%;
 
-  h1 {
-    color: $buttonClr;
+  img {
+    width: 15rem;
   }
 
-  h2 {
-    font-family: $font900;
-    font-size: 1.875rem;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

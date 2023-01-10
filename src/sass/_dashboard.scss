@@ -1,10 +1,46 @@
-.dashboard-main-section,
-.dashboard-header {
+@use "./font" as *;
+@use "./colors" as *;
+
+$dashboardGap: 1.875rem;
+
+.dashboard-main-section {
   padding-inline: min(10%, 12.5rem);
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .dashboard-title-container {
+    padding-block: $dashboardGap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dashboard-title {
+      font-size: 2.1875rem;
+      font-family: $font900;
+    }
+
+    .outputDate {
+      color: $fadeClr;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .dashboard-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 1.875rem;
-  margin-top: 1.875rem;
+  width: 70%;
+}
+
+.two-section-wrapper {
+  display: flex;
+  gap: 1.875rem;
+}
+
+div.swal-title {
+  font-family: $font400;
 }

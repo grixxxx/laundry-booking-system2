@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@studio-freight/lenis": "^0.2.28",
-    "rough-notation": "^0.5.1"
+    "rough-notation": "^0.5.1",
+    "sweetalert": "^2.1.2"
   }
 }
