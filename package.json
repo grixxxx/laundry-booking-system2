@@ -2,10 +2,14 @@
   "name": "laundrybookingsystem",
   "version": "1.0.0",
   "description": "",
-  "source": "src/index.html",
+  "source": [
+    "src/index.html",
+    "src/payment/index.html",
+    "src/Dashboard/index.html"
+  ],
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html",
+    "start": "parcel",
+    "build": "parcel build",
     "sass:watch": "sass --watch src/sass:src/dist/css"
   },
   "keywords": [],
