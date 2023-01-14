@@ -106,16 +106,20 @@ $borderRadius: 0.625rem;
   }
 }
 
-.pricing-section > h1 {
-  @include dashboardSectionTitle();
-}
+.pricing-section {
+  width: 30%;
 
-h1.pricing-section-title--margin {
-  margin-bottom: 30px;
+  h1 {
+    @include dashboardSectionTitle();
+  }
 
-  span {
-    font-size: 0.75rem;
-    font-family: $font400;
+  h1.pricing-section-title--margin {
+    margin-bottom: 30px;
+
+    span {
+      font-size: 0.75rem;
+      font-family: $font400;
+    }
   }
 }
 

@@ -106,8 +106,9 @@
 .dashboard-header {
   color: $primaryClr;
   padding: 2rem 6rem;
-  @include header();
-  width: 70%;
+  max-width: 90rem;
+  background-color: $accentClr;
+  margin: auto;
 
   img {
     width: 15rem;

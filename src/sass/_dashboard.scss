@@ -5,12 +5,12 @@
 $dashboardGap: 1.875rem;
 
 .dashboard-main-section {
-  padding-inline: min(10%, 12.5rem);
+  max-width: 100rem;
+  margin: auto;
   display: flex;
-
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  padding-inline: 3rem;
 
   .dashboard-title-container {
     padding-block: $dashboardGap;

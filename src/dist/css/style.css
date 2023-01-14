@@ -240,6 +240,12 @@ table {
     transform: none;
   }
 }
+@media (width > 101.875rem) {
+  .dashboard-header {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
 .order-card-container {
   display: flex;
   gap: 1.875rem;
@@ -315,15 +321,17 @@ table {
   padding: 0.2rem 1rem;
 }
 
-.pricing-section > h1 {
+.pricing-section {
+  width: 30%;
+}
+.pricing-section h1 {
   font-size: 2.1875rem;
   font-family: gilroy-bold;
 }
-
-h1.pricing-section-title--margin {
+.pricing-section h1.pricing-section-title--margin {
   margin-bottom: 30px;
 }
-h1.pricing-section-title--margin span {
+.pricing-section h1.pricing-section-title--margin span {
   font-size: 0.75rem;
   font-family: gilroy-regular;
 }
@@ -452,13 +460,9 @@ h1.pricing-section-title--margin span {
 .dashboard-header {
   color: #ffffff;
   padding: 2rem 6rem;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 90rem;
   background-color: #274c77;
-  width: 70%;
+  margin: auto;
 }
 .dashboard-header img {
   width: 15rem;
@@ -795,11 +799,12 @@ dialog #modal-close:hover {
 }
 
 .dashboard-main-section {
-  padding-inline: min(10%, 12.5rem);
+  max-width: 100rem;
+  margin: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  padding-inline: 3rem;
 }
 .dashboard-main-section .dashboard-title-container {
   padding-block: 1.875rem;

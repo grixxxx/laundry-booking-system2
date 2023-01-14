@@ -84,3 +84,10 @@
     transform: none;
   }
 }
+
+@media (width > 101.875rem) {
+  .dashboard-header {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
