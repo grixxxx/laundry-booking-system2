@@ -726,67 +726,44 @@ dialog #modal-close:hover {
 }
 
 .payment-main {
-  padding: 5rem;
-  display: flex;
-  gap: 1.875rem;
+  box-shadow: 0px 13px 30px rgba(7, 6, 41, 0.16);
+  padding: 3rem;
+  margin-block: 3rem;
+  max-width: 96rem;
+  margin-inline: auto;
+  border-radius: 30px;
 }
 .payment-main .schedule-section {
-  flex: 1;
-  box-shadow: 0px 13px 30px rgba(7, 6, 41, 0.16);
-  padding: 3rem;
+  margin-bottom: 3rem;
 }
-.payment-main .schedule-section h1 {
+.payment-main .schedule-section .schedule-input-container > input {
+  padding: 0.5rem;
+  width: 15em;
+}
+.payment-main .schedule-section label {
+  margin-right: 1rem;
+}
+.payment-main .schedule-section label[for=timeInput] {
+  margin-left: 3rem;
+}
+.payment-main h1 {
   font-size: 2.1875rem;
   font-family: gilroy-bold;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
-.payment-main .schedule-section form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-.payment-main .schedule-section form input, .payment-main .schedule-section form textarea {
-  border: 1px solid #121212;
-  border-radius: 10px;
-}
-.payment-main .schedule-section form div {
-  display: flex;
-  gap: 1rem;
-}
-.payment-main .schedule-section form div > * {
-  flex: 1;
-}
-.payment-main .schedule-section form textarea {
-  resize: none;
-  font-family: gilroy-regular;
-  padding: 1em;
-}
-
-.customize-section {
-  box-shadow: 0px 13px 30px rgba(7, 6, 41, 0.16);
-  flex: 1.5;
-  padding: 3rem;
-}
-.customize-section > *:not(h1) {
-  margin-bottom: 4rem;
-}
-.customize-section h1 {
-  font-size: 2.1875rem;
-  font-family: gilroy-bold;
-  margin-bottom: 1.5em;
-}
-.customize-section h2 {
+.payment-main h2 {
   font-size: 1.25rem;
   font-family: gilroy-semiBold;
   margin-bottom: 1rem;
 }
-.customize-section .garment-count-wrapper {
+
+.garment-count-wrapper {
   display: flex;
-  gap: 3rem;
+  gap: 1.875rem;
   flex-wrap: wrap;
 }
-.customize-section article {
+
+.garment-count-container {
   display: flex;
   gap: 3rem;
   align-items: center;
@@ -794,8 +771,13 @@ dialog #modal-close:hover {
   padding: 1.5rem;
   border-radius: 20px;
 }
-.customize-section input[type=checkbox]:not(:nth-child(1)), .customize-section .payment-main .schedule-section form textarea[type=checkbox]:not(:nth-child(1)), .payment-main .schedule-section form .customize-section textarea[type=checkbox]:not(:nth-child(1)) {
+
+input[type=checkbox]:not(:nth-child(1)) {
   margin-left: 3rem;
+}
+
+.ads-on {
+  padding-block: 1.875rem;
 }
 
 .dashboard-main-section {
