@@ -5,7 +5,8 @@
   "source": [
     "src/index.html",
     "src/payment/index.html",
-    "src/Dashboard/index.html"
+    "src/Dashboard/index.html",
+    "src/Checkout/index.html"
   ],
   "scripts": {
     "start": "parcel",

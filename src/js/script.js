@@ -39,7 +39,6 @@ hamburgerMenu.addEventListener("click", () => {
 
 const loginModal = document.querySelector(".login-modal");
 
-
 const signupModal = document.querySelector(".signup-modal");
 
 const signupButton = document.querySelectorAll(".signup-button ");
@@ -62,7 +61,6 @@ const altLoginButton = document
     signupModal.close();
     loginModal.showModal();
   });
-
 
 signupButton.forEach((signup) => {
   signup.addEventListener("click", () => {

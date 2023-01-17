@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Laundry Booking System</title>
+    <link rel="stylesheet" href="/index.98f508ad.css">
+    <link rel="shortcut icon" href="/logoIcon.bcf0d95e.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <nav class="dashboard-nav">
+        <img src="/laundryLogo.89e90bb0.png" alt="business logo">
+
+        <button class="logout-button">LOGOUT</button>
+      </nav>
+    </header>
+    <form action="../Dashboard/index.html" class="checkout-form">
+      <main class="main-checkout">
+        <section class="checkout-section">
+          <h1>CHECKOUT</h1>
+          <section class="section-flex">
+            <h2 class="section-flex-title">Personal Details:</h2>
+            <div class="input-container-flex">
+              <input type="text" name="firstName" placeholder="First Name" class="requiredInput" required="">
+              <input type="text" name="lastName" placeholder="Last Name" class="requiredInput" required="">
+              <input type="text" name="phoneNumber" placeholder="Phone Number" class="requiredInput" required="" onkeypress="return isInputNumber(event)"><input type="email" name="email" placeholder="Email Address" class="requiredInput" required="">
+            </div>
+          </section>
+          <section class="section-flex">
+            <h2 class="section-flex-title">Shipping Details:</h2>
+            <section>
+              <h3>Shipping Address:</h3>
+              <div class="input-container-flex margin-bottom-1rem">
+                <input class="requiredInput type=" text"="" name="address" placeholder="Street Address" required="">
+                <input type="text" name="city" placeholder="City" required="" class="requiredInput"><input type="text" name="state" placeholder="State" required="" class="requiredInput"><input type="text" name="zipcode" placeholder="Zip Code" required="" onkeypress="return isInputNumber(event)" class="requiredInput">
+              </div>
+
+              <h3>Shipping Method:</h3>
+              <div class="section-flex">
+                <label for="free">
+                  <article class="shipping-radio-flex">
+                    <div>
+                      <h2>2-Day Standard</h2>
+                      <p>Delivery: Tomorrow</p>
+                    </div>
+
+                    <div class="radio">
+                      <span>Free</span>
+                      <input id="free" name="shipping" type="radio" value="0" checked="">
+                    </div>
+                  </article>
+                </label>
+
+                <label for="oneday">
+                  <article class="shipping-radio-flex">
+                    <div>
+                      <h2>1-Day Process</h2>
+                      <p>Delivery: Today</p>
+                    </div>
+                    <div class="radio">
+                      <span>₱100.00</span>
+                      <input id="oneday" name="shipping" type="radio" value="100">
+                    </div>
+                  </article>
+                </label>
+              </div>
+            </section>
+          </section>
+          <section class="section-flex">
+            <h2 class="section-flex-title">Payment Method:</h2>
+
+            <section>
+              <section class="section-flex margin-bottom-1rem">
+                <label for="cod">
+                  <article class="payment-radio-flex">
+                    <img src="/codIcon.6b1fec91.svg" alt="">
+                    <div class="radio">
+                      <span>COD</span>
+                      <input id="cod" name="payment" type="radio">
+                    </div>
+                  </article>
+                </label>
+
+                <label for="gcash">
+                  <article class="payment-radio-flex">
+                    <img src="/gcashIcon.f513d56e.svg" alt="">
+                    <div class="radio">
+                      <span>GCASH</span>
+                      <input id="gcash" name="payment" type="radio">
+                    </div>
+                  </article>
+                </label>
+
+                <label for="debitcard">
+                  <article class="payment-radio-flex">
+                    <img src="/bankCardIcon.f088f5b9.svg" alt="">
+
+                    <div class="radio">
+                      <span>DEBIT CARD</span>
+                      <input id="debitcard" name="payment" type="radio">
+                    </div>
+                  </article>
+                </label>
+              </section>
+
+              <section class="debitcard-info-section">
+                <div class="input-container-flex">
+                  <input type="text" name="CardName" placeholder="Name on the Card" class="cardInfo">
+
+                  <input type="text" name="credit-card-number" id="credit-card-number" class="cardInfo" placeholder="Card Number" maxlength="16" onkeypress="return isInputNumber(event)">
+                  <input type="date" name="expiryDate" placeholder="Expiry Date" id="expiration" class="cardInfo" onkeypress="return isInputNumber(event)">
+                  <input type="text" name="CVV" id="ccv" class="cardInfo" placeholder="CVC/CVV" maxlength="3" onkeypress="return isInputNumber(event)">
+                </div>
+              </section>
+            </section>
+          </section>
+        </section>
+        <section class="order-summary-section">
+          <h1>ORDER SUMMARY</h1>
+
+          <section class="garment-selected-container"></section>
+
+          <input class="discountCodeInput margin-bottom-1rem" type="text" placeholder="Discount Code">
+
+          <div class="order-total-container margin-bottom-1rem">
+            <p>Subtotal:</p>
+            <span class="subTotal">0.00</span>
+          </div>
+          <div class="order-total-container margin-bottom-1rem">
+            <p>Delivery cost:</p>
+            <span class="deliveryCost">0.00</span>
+          </div>
+
+          <div class="order-total-container margin-bottom-1rem">
+            <p>Total:</p>
+            <span class="grandTotal">0.00</span>
+          </div>
+          <button class="checkoutButton" type="submit">CHECKOUT</button>
+        </section>
+      </main>
+    </form>
+
+    <script src="/Checkout/index.8bb2273d.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="/Checkout.146ad3b5.js"></script></body>
+</html>
