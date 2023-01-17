@@ -46,6 +46,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      .grandTotal {
+        font-family: $font700;
+        font-size: 1.8rem;
+      }
     }
 
     .garment-selected-section {

@@ -823,6 +823,10 @@ input[type=checkbox]:not(:nth-child(1)) {
   align-items: center;
   justify-content: space-between;
 }
+.main-checkout .order-summary-section .order-total-container .grandTotal {
+  font-family: gilroy-semiBold;
+  font-size: 1.8rem;
+}
 .main-checkout .order-summary-section .garment-selected-section {
   display: flex;
   justify-content: space-between;

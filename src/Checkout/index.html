@@ -20,11 +20,10 @@
         <button class="logout-button">LOGOUT</button>
       </nav>
     </header>
-
-    <main class="main-checkout">
-      <section class="checkout-section">
-        <h1>CHECKOUT</h1>
-        <form action="#">
+    <form action="../Dashboard/index.html" class="checkout-form">
+      <main class="main-checkout">
+        <section class="checkout-section">
+          <h1>CHECKOUT</h1>
           <section class="section-flex">
             <h2 class="section-flex-title">Personal Details:</h2>
             <div class="input-container-flex">
@@ -32,22 +31,28 @@
                 type="text"
                 name="firstName"
                 placeholder="First Name"
+                class="requiredInput"
                 required
               />
               <input
                 type="text"
                 name="lastName"
                 placeholder="Last Name"
+                class="requiredInput"
                 required
               />
               <input
-                type="phone"
+                type="text"
                 name="phoneNumber"
                 placeholder="Phone Number"
+                class="requiredInput"
+                required
+                onkeypress="return isInputNumber(event)"
               /><input
                 type="email"
                 name="email"
                 placeholder="Email Address"
+                class="requiredInput"
                 required
               />
             </div>
@@ -57,28 +62,27 @@
             <section>
               <h3>Shipping Address:</h3>
               <div class="input-container-flex margin-bottom-1rem">
-                <input
-                  class="flex-1"
-                  type="text"
-                  name="address"
-                  placeholder="Street Address"
-                  required
-                />
+                <input class="requiredInput type="text" name="address"
+                placeholder="Street Address" required />
                 <input
                   type="text"
                   name="city"
                   placeholder="City"
                   required
+                  class="requiredInput"
                 /><input
                   type="text"
                   name="state"
                   placeholder="State"
                   required
+                  class="requiredInput"
                 /><input
                   type="text"
                   name="zipcode"
                   placeholder="Zip Code"
                   required
+                  onkeypress="return isInputNumber(event)"
+                  class="requiredInput"
                 />
               </div>
 
@@ -93,7 +97,13 @@
 
                     <div class="radio">
                       <span>Free</span>
-                      <input id="free" name="shipping" type="radio" value="0" />
+                      <input
+                        id="free"
+                        name="shipping"
+                        type="radio"
+                        value="0"
+                        checked
+                      />
                     </div>
                   </article>
                 </label>
@@ -161,12 +171,14 @@
                     type="text"
                     name="CardName"
                     placeholder="Name on the Card"
+                    class="cardInfo"
                   />
 
                   <input
                     type="text"
                     name="credit-card-number"
                     id="credit-card-number"
+                    class="cardInfo"
                     placeholder="Card Number"
                     maxlength="16"
                     onkeypress="return isInputNumber(event)"
@@ -176,12 +188,14 @@
                     name="expiryDate"
                     placeholder="Expiry Date"
                     id="expiration"
+                    class="cardInfo"
                     onkeypress="return isInputNumber(event)"
                   />
                   <input
                     type="text"
                     name="CVV"
                     id="ccv"
+                    class="cardInfo"
                     placeholder="CVC/CVV"
                     maxlength="3"
                     onkeypress="return isInputNumber(event)"
@@ -190,36 +204,37 @@
               </section>
             </section>
           </section>
-        </form>
-      </section>
-      <section class="order-summary-section">
-        <h1>ORDER SUMMARY</h1>
+        </section>
+        <section class="order-summary-section">
+          <h1>ORDER SUMMARY</h1>
 
-        <section class="garment-selected-container"></section>
+          <section class="garment-selected-container"></section>
 
-        <input
-          class="discountCodeInput"
-          type="text"
-          placeholder="Discount Code"
-        />
+          <input
+            class="discountCodeInput margin-bottom-1rem"
+            type="text"
+            placeholder="Discount Code"
+          />
 
-        <div class="order-total-container">
-          <p>Subtotal:</p>
-          <span>140.00</span>
-        </div>
-        <div class="order-total-container">
-          <p>Delivery cost:</p>
-          <span class="deliveryCost">0.00</span>
-        </div>
+          <div class="order-total-container margin-bottom-1rem">
+            <p>Subtotal:</p>
+            <span class="subTotal">0.00</span>
+          </div>
+          <div class="order-total-container margin-bottom-1rem">
+            <p>Delivery cost:</p>
+            <span class="deliveryCost">0.00</span>
+          </div>
 
-        <div class="order-total-container">
-          <p>Total:</p>
-          <span>140.00</span>
-        </div>
-        <button class="checkoutButton">CHECKOUT</button>
-      </section>
-    </main>
+          <div class="order-total-container margin-bottom-1rem">
+            <p>Total:</p>
+            <span class="grandTotal">0.00</span>
+          </div>
+          <button class="checkoutButton" type="submit">CHECKOUT</button>
+        </section>
+      </main>
+    </form>
 
     <script src="../js/checkout.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
