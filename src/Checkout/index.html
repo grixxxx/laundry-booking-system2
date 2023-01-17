@@ -6,6 +6,220 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checkout | Laundry Booking System</title>
     <link rel="stylesheet" href="../dist/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/logoIcon.png"
+      type="image/x-icon"
+    />
   </head>
-  <body></body>
+  <body>
+    <header class="dashboard-header">
+      <nav class="dashboard-nav">
+        <img src="../assets/laundryLogo.png" alt="business logo" />
+
+        <button class="logout-button">LOGOUT</button>
+      </nav>
+    </header>
+
+    <main class="main-checkout">
+      <section class="checkout-section">
+        <h1>CHECKOUT</h1>
+        <form action="#">
+          <section class="section-flex">
+            <h2 class="section-flex-title">Personal Details:</h2>
+            <div class="input-container-flex">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                required
+              />
+              <input
+                type="phone"
+                name="phoneNumber"
+                placeholder="Phone Number"
+              /><input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+          </section>
+          <section class="section-flex">
+            <h2 class="section-flex-title">Shipping Details:</h2>
+            <section>
+              <h3>Shipping Address:</h3>
+              <div class="input-container-flex margin-bottom-1rem">
+                <input
+                  class="flex-1"
+                  type="text"
+                  name="address"
+                  placeholder="Street Address"
+                  required
+                />
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="City"
+                  required
+                /><input
+                  type="text"
+                  name="state"
+                  placeholder="State"
+                  required
+                /><input
+                  type="text"
+                  name="zipcode"
+                  placeholder="Zip Code"
+                  required
+                />
+              </div>
+
+              <h3>Shipping Method:</h3>
+              <div class="section-flex">
+                <label for="free">
+                  <article class="shipping-radio-flex">
+                    <div>
+                      <h2>2-Day Standard</h2>
+                      <p>Delivery: Tomorrow</p>
+                    </div>
+
+                    <div class="radio">
+                      <span>Free</span>
+                      <input id="free" name="shipping" type="radio" value="0" />
+                    </div>
+                  </article>
+                </label>
+
+                <label for="oneday">
+                  <article class="shipping-radio-flex">
+                    <div>
+                      <h2>1-Day Process</h2>
+                      <p>Delivery: Today</p>
+                    </div>
+                    <div class="radio">
+                      <span>₱100.00</span>
+                      <input
+                        id="oneday"
+                        name="shipping"
+                        type="radio"
+                        value="100"
+                      />
+                    </div>
+                  </article>
+                </label>
+              </div>
+            </section>
+          </section>
+          <section class="section-flex">
+            <h2 class="section-flex-title">Payment Method:</h2>
+
+            <section>
+              <section class="section-flex margin-bottom-1rem">
+                <label for="cod">
+                  <article class="payment-radio-flex">
+                    <img src="../assets/codIcon.svg" alt="" />
+                    <div class="radio">
+                      <span>COD</span>
+                      <input id="cod" name="payment" type="radio" />
+                    </div>
+                  </article>
+                </label>
+
+                <label for="gcash">
+                  <article class="payment-radio-flex">
+                    <img src="../assets/gcashIcon.svg" alt="" />
+                    <div class="radio">
+                      <span>GCASH</span>
+                      <input id="gcash" name="payment" type="radio" />
+                    </div>
+                  </article>
+                </label>
+
+                <label for="debitcard">
+                  <article class="payment-radio-flex">
+                    <img src="../assets/bankCardIcon.svg" alt="" />
+
+                    <div class="radio">
+                      <span>DEBIT CARD</span>
+                      <input id="debitcard" name="payment" type="radio" />
+                    </div>
+                  </article>
+                </label>
+              </section>
+
+              <section class="debitcard-info-section">
+                <div class="input-container-flex">
+                  <input
+                    type="text"
+                    name="CardName"
+                    placeholder="Name on the Card"
+                  />
+
+                  <input
+                    type="text"
+                    name="credit-card-number"
+                    id="credit-card-number"
+                    placeholder="Card Number"
+                    maxlength="16"
+                    onkeypress="return isInputNumber(event)"
+                  />
+                  <input
+                    type="date"
+                    name="expiryDate"
+                    placeholder="Expiry Date"
+                    id="expiration"
+                    onkeypress="return isInputNumber(event)"
+                  />
+                  <input
+                    type="text"
+                    name="CVV"
+                    id="ccv"
+                    placeholder="CVC/CVV"
+                    maxlength="3"
+                    onkeypress="return isInputNumber(event)"
+                  />
+                </div>
+              </section>
+            </section>
+          </section>
+        </form>
+      </section>
+      <section class="order-summary-section">
+        <h1>ORDER SUMMARY</h1>
+
+        <section class="garment-selected-container"></section>
+
+        <input
+          class="discountCodeInput"
+          type="text"
+          placeholder="Discount Code"
+        />
+
+        <div class="order-total-container">
+          <p>Subtotal:</p>
+          <span>140.00</span>
+        </div>
+        <div class="order-total-container">
+          <p>Delivery cost:</p>
+          <span class="deliveryCost">0.00</span>
+        </div>
+
+        <div class="order-total-container">
+          <p>Total:</p>
+          <span>140.00</span>
+        </div>
+        <button class="checkoutButton">CHECKOUT</button>
+      </section>
+    </main>
+
+    <script src="../js/checkout.js"></script>
+  </body>
 </html>
